@@ -1,0 +1,4 @@
+include_dev: False
+py_versions:
+  - "3.10"
+  - "3.12"
