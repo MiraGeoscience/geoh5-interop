@@ -30,13 +30,13 @@ jobs:
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-static_analysis.yml@main
     with:
       package-manager: 'poetry'
-      app-name: 'geoh5-interop'
+      app-name: 'geoh5_interop'
       python-version: '3.10'
   call-workflow-pre-commmit:
     name: Pre-Commit
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-pre_commit.yml@main
     with:
-      app-name: 'geoh5-interop'
+      app-name: 'geoh5_interop'
   call-workflow-pytest-poetry:
     name: Pytest with Poetry
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@main
