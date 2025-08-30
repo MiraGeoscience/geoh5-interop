@@ -37,11 +37,19 @@ jobs:
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-pre_commit.yml@main
     with:
       app-name: 'geoh5-interop'
-  call-workflow-pytest:
-    name: Pytest
+  call-workflow-pytest-poetry:
+    name: Pytest with Poetry
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@main
     with:
       package-manager: 'poetry'
+      python-versions: '["3.10", "3.12"]'
+      os: '["ubuntu-latest", "windows-latest"]'
+      cache-number: 1
+  call-workflow-pytest-conda:
+    name: Pytest with Conda
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@main
+    with:
+      package-manager: 'conda'
       python-versions: '["3.10", "3.12"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
