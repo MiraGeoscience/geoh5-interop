@@ -12,7 +12,7 @@ requires = [
 build-backend = "poetry_dynamic_versioning.backend"
 
 [project]
-name = "geoh5py"
+name = "geoh5-interop"
 requires-python = ">=3.10,<4.0"
 
 description = "A meta-package that groups together packages for interoperability between GEOH5 and other file formats."
@@ -114,13 +114,13 @@ style = "pep440"
 vcs = "git"
 
 [tool.poetry-dynamic-versioning.substitution]
-files = ["geoh5py/_version.py", "recipe.yaml"]
+files = ["geoh5_interop/_version.py", "recipe.yaml"]
 patterns = [
     { value = '''(^__version__\s*(?::.*?)?=\s*['"])[^'"]*(['"])''', mode = "str" },
     { value = '''(^\s*version\s*(?::.*?)?:\s*['"])[^'"]*(['"])''', mode = "str" },
 ]
 
-[tool.poetry-dynamic-versioning.files."geoh5py/_version.py"]
+[tool.poetry-dynamic-versioning.files."geoh5_interop/_version.py"]
 persistent-substitution = true
 initial-content = """
   # Version placeholder that will be replaced during substitution
