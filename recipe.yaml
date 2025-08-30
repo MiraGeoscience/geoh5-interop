@@ -1,6 +1,8 @@
+schema_version: 1
+
 context:
   name: geoh5-interop
-  version: 1.2.0
+  version: "0.0.0.dev0"  # This will be replaced by the actual version in the build process
   python_min: 3.10
 
 package:
@@ -11,15 +13,16 @@ source:
   path: ../${{ name }}
 
 build:
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
 
 requirements:
   host:
     - pip
-    - poetry-core >=1.0.0
-    - python ${{ python_min }}.*
+    - poetry-core >=1.8.0
+    - poetry-dynamic-versioning >=1.9, <2.0.dev
+    - python 3.10.*
     - setuptools
   run:
     - python >=${{ python_min }}
@@ -30,13 +33,13 @@ requirements:
 tests:
   - python:
       imports:
-      - geoh5_interop
-      - geoh5py
-      - las_geoh5
-      - omf
-      - properties
+        - geoh5_interop
+        - geoh5_interop._version
+        - geoh5py
+        - las_geoh5
+        - omf
+        - properties
       pip_check: false  # something wrong with properties 0.6.1, but installation seems correct nonetheless
-      python_version: ${{ python_min }}.*
   - script:
       - pip list
     requirements:
@@ -46,6 +49,7 @@ tests:
 about:
   homepage: https://www.mirageoscience.com/mining-industry-software/python-integration
   summary: 'A meta-package that groups together packages for interoperability between GEOH5 and other file formats.'
+  # repository: https://github.com/MiraGeoscience/geoh5-interop
 
   description: |
     This meta-package collects the following packages:
