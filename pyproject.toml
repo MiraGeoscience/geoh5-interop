@@ -73,14 +73,14 @@ version = "0.0.0.dev0"
 
 [tool.poetry.dependencies]
 # geoh5py is a dependency of other apps: not strictly needed here, but good to ensure version
-geoh5py = {version = ">=0.11.0, <0.12.dev", allow-prereleases = true}
-#geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/0.11.0"}
+#geoh5py = {version = ">=0.12.0, <0.13.dev", allow-prereleases = true}
+geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
 
-las-geoh5 = { version = ">=0.3.1, <0.4.dev", allow-prereleases = true}
-#las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/0.4.0"}
+#las-geoh5 = { version = ">=0.3.2, <0.4.dev", allow-prereleases = true}
+las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "develop"}
 
-mira-omf = {version = ">=3.3.1, <3.4.dev", allow-prereleases = true}
-#mira-omf = {git = "https://github.com/MiraGeoscience/omf.git", rev = "release/3.4.0"}
+#mira-omf = {version = ">=3.3.2, <3.4.dev", allow-prereleases = true}
+mira-omf = {git = "https://github.com/MiraGeoscience/omf.git", rev = "develop"}
 
 [tool.poetry.group.dev.dependencies]
 jinja2 = '*'
