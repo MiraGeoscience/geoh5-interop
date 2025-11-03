@@ -1,19 +1,21 @@
 name: Create JIRA issue
 
-permissions:
-  contents: read
-  issues: write
 on:
   issues:
     types: [opened]
 
+permissions: {}
+
 jobs:
   call-workflow-create-jira-issue:
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-jira-issue_to_jira.yml@main
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-jira-issue_to_jira.yml@v2
+    permissions:
+      contents: read
+      issues: write
+    with:
+      project-key: 'GEOPY'
+      components: '[{"name": "packaging"}]'
     secrets:
       JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
       JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
       JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-    with:
-      project-key: 'GEOPY'
-      components: '[{"name": "packaging"}]'

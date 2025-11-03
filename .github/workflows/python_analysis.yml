@@ -1,8 +1,5 @@
 name: Python analysis
 
-permissions:
-  contents: read
-  pull-requests: read
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
@@ -20,6 +17,8 @@ on:
       - feature/**
       - hotfix/**
 
+permissions: {}
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -27,29 +26,26 @@ concurrency:
 jobs:
   call-workflow-static-analysis:
     name: Static analysis
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-static_analysis.yml@main
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-static_analysis.yml@v2
+    permissions:
+      contents: read
+      pull-requests: read
     with:
       package-manager: 'poetry'
       app-name: 'geoh5_interop'
       python-version: '3.10'
-  call-workflow-pre-commmit:
-    name: Pre-Commit
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-pre_commit.yml@main
-    with:
-      app-name: 'geoh5_interop'
-  call-workflow-pytest-poetry:
-    name: Pytest with Poetry
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@main
+  call-workflow-pytest:
+    name: Pytest
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v2
+    permissions:
+      contents: read
+      pull-requests: read
     with:
       package-manager: 'poetry'
-      python-versions: '["3.10", "3.12"]'
+      python-versions: '["3.10", "3.11", "3.12"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
-  call-workflow-pytest-conda:
-    name: Pytest with Conda
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@main
-    with:
-      package-manager: 'conda'
-      python-versions: '["3.10", "3.12"]'
-      os: '["ubuntu-latest", "windows-latest"]'
-      cache-number: 1
+      codecov-reference-python-version: '3.10'
+      codecov-reference-os: '["windows-latest"]'
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
