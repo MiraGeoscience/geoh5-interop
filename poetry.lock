@@ -185,21 +185,25 @@ test = ["pytest (>=6)"]
 
 [[package]]
 name = "geoh5py"
-version = "0.12.0b3"
+version = "0.12.0b4.dev8+a9f57210"
 description = "Python API for geoh5, an open file format for geoscientific data"
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = ">=3.10,<4.0"
 groups = ["main"]
-files = [
-    {file = "geoh5py-0.12.0b3-py3-none-any.whl", hash = "sha256:59932ee0ba044509c4389b547d50e381f62e32eea8c5e22d69526880a37489b5"},
-    {file = "geoh5py-0.12.0b3.tar.gz", hash = "sha256:323981fdcb2f5a5d3766f19bd8013b95ce1b9402429eba307130232e60b77ed6"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-h5py = ">=3.2.1,<4.0.0"
-numpy = ">=1.26.0,<1.27.0"
-Pillow = ">=10.3.0,<10.4.0"
-pydantic = ">=2.5.2,<3.0.0"
+h5py = "^3.2.1"
+numpy = "~1.26.0"
+Pillow = "~10.3.0"
+pydantic = "^2.5.2"
+
+[package.source]
+type = "git"
+url = "https://github.com/MiraGeoscience/geoh5py.git"
+reference = "develop"
+resolved_reference = "a9f5721079c097b1fa484ff8424146c6cd1a8c0c"
 
 [[package]]
 name = "h5py"
@@ -284,22 +288,26 @@ plugins = ["setuptools"]
 
 [[package]]
 name = "las-geoh5"
-version = "0.3.2b1"
+version = "0.3.3a0"
 description = "Las/Geoh5 conversion"
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = ">=3.10,<4.0"
 groups = ["main"]
-files = [
-    {file = "las_geoh5-0.3.2b1-py3-none-any.whl", hash = "sha256:7adbd67a73adb6084437a4996c1038c0fec97feac0d58cee2a1fe55efbb17a2e"},
-    {file = "las_geoh5-0.3.2b1.tar.gz", hash = "sha256:d9993893c9dc338215648644a48772bf0e42b994ca0119cd207c1efe349d179b"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-geoh5py = ">=0.12.0b1,<0.13.dev"
-lasio = "==0.31.*"
-numpy = ">=1.26.0,<1.27.0"
-pydantic = ">=2.5.2,<3.0.0"
-tqdm = ">=4.66.1,<5.0.0"
+geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
+lasio = "0.31.*"
+numpy = "~1.26.0"
+pydantic = "^2.5.2"
+tqdm = "^4.66.1"
+
+[package.source]
+type = "git"
+url = "https://github.com/MiraGeoscience/las-geoh5.git"
+reference = "develop"
+resolved_reference = "cbc8303b397e30e9f9b6ef96f6f9765b41f8eff0"
 
 [[package]]
 name = "lasio"
@@ -334,23 +342,27 @@ files = [
 
 [[package]]
 name = "mira-omf"
-version = "3.3.2b1"
+version = "3.4.0a0"
 description = "API Library for Open Mining Format"
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = ">=3.10,<4.0"
 groups = ["main"]
-files = [
-    {file = "mira_omf-3.3.2b1-py3-none-any.whl", hash = "sha256:811206120ce866f93c8237ae18665d80312a213efae7f78f63089ea86316ee0e"},
-    {file = "mira_omf-3.3.2b1.tar.gz", hash = "sha256:cc1afbd38e5d2c61772a8df5b29ef96b757b5af6d9dbc53b7ff3e4b41d43a1eb"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-geoh5py = ">=0.12.0b1,<0.13.dev"
-numpy = ">=1.26.0,<1.27.0"
-properties = "==0.6.*"
-pypng = ">=0.20220715,<0.20220716"
-six = ">=1.16,<2.0"
-vectormath = "==0.2.*"
+geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
+numpy = "~1.26.0"
+properties = "0.6.*"
+pypng = "^0.20220715"
+six = "^1.16"
+vectormath = "0.2.*"
+
+[package.source]
+type = "git"
+url = "https://github.com/MiraGeoscience/omf.git"
+reference = "develop"
+resolved_reference = "91c0549ae52bf230084d8e7f45df07ed24e11812"
 
 [[package]]
 name = "numpy"
@@ -1029,4 +1041,4 @@ numpy = ">=1.7"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<4.0"
-content-hash = "6418a642a84dd2c605de6b1cf6b902aa0443de50a371002f933b27d0bc6bc461"
+content-hash = "8c12eaa5a89467ebb5ee7d5e52b731b0e8eff8d57d7f428c7999bbcd790f4ef2"
