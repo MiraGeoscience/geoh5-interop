@@ -42,7 +42,7 @@ jobs:
       pull-requests: read
     with:
       package-manager: 'poetry'
-      python-versions: '["3.10", "3.11", "3.12"]'
+      python-versions: '["3.10", "3.12"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
       codecov-reference-python-version: '3.10'
