@@ -2,10 +2,6 @@
 # platform: win-64
 # input_hash: cc6953e81d07355c8d6e4fcac357c1eb988239f18edc59048eb45731e524f66d
 
-channels:
-  - https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev
-  - conda-forge
-  - nodefaults
 dependencies:
   - _openmp_mutex=4.5=2_gnu
   - annotated-types=0.7.0=pyhd8ed1ab_1
