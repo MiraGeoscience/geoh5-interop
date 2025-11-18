@@ -50,7 +50,7 @@ jobs:
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
   call-workflow-pytest-conda:
-    name: Pytest
+    name: Pytest with Conda
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@DEVOPS-867
     permissions:
       contents: read
