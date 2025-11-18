@@ -31,21 +31,39 @@ jobs:
       contents: read
       pull-requests: read
     with:
-      package-manager: 'poetry'
+      package-manager: 'conda'
+      virtual-repo-names: '["public-noremote-conda-dev"]'
       app-name: 'geoh5_interop'
       python-version: '3.10'
-  call-workflow-pytest:
-    name: Pytest
+    secrets:
+      JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
+      JFROG_ARTIFACTORY_TOKEN: ${{ secrets.JFROG_ARTIFACTORY_TOKEN }}
+  call-workflow-pytest-poetry:
+    name: Pytest with Poetry
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v2
     permissions:
       contents: read
       pull-requests: read
     with:
       package-manager: 'poetry'
-      python-versions: '["3.10", "3.11", "3.12"]'
+      python-versions: '["3.10", "3.12"]'
+      os: '["ubuntu-latest", "windows-latest"]'
+      cache-number: 1
+  call-workflow-pytest-conda:
+    name: Pytest with Conda
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v2
+    permissions:
+      contents: read
+      pull-requests: read
+    with:
+      package-manager: 'conda'
+      virtual-repo-names: '["public-noremote-conda-dev"]'
+      python-versions: '["3.10", "3.12"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
       codecov-reference-python-version: '3.10'
       codecov-reference-os: '["windows-latest"]'
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
+      JFROG_ARTIFACTORY_TOKEN: ${{ secrets.JFROG_ARTIFACTORY_TOKEN }}

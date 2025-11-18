@@ -4,6 +4,7 @@ context:
   name: geoh5-interop
   version: "0.0.0.dev0"  # This will be replaced by the actual version in the build process
   python_min: 3.10
+  module_name: ${{ name|lower|replace("-", "_") }}
 
 package:
   name: ${{ name|lower }}
@@ -26,15 +27,15 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - geoh5py >=0.12.0,<0.13.dev
-    - las-geoh5 >=0.3.2,<0.4.dev
-    - mira-omf >=3.3.2,<3.4.dev
+    - geoh5py >=0.12.0b1,<0.13.dev
+    - las-geoh5 >=0.3.2b1,<0.4.dev
+    - mira-omf >=3.3.2b1,<3.4.dev
 
 tests:
   - python:
       imports:
-        - geoh5_interop
-        - geoh5_interop._version
+        - ${{ module_name }}
+        - ${{ module_name }}._version
         - geoh5py
         - las_geoh5
         - omf
@@ -45,6 +46,9 @@ tests:
     requirements:
       run:
         - pip
+  - package_contents:
+      files:
+        - site-packages/${{ module_name }}/_version.py
 
 about:
   homepage: https://www.mirageoscience.com/mining-industry-software/python-integration
