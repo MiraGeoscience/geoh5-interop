@@ -71,7 +71,7 @@ version = "0.0.0.dev0"
 
 [tool.poetry.dependencies]
 # geoh5py is a dependency of other apps: not strictly needed here, but good to ensure version
-geoh5py = {version = ">=0.12.0rc1, 0.12.*", allow-prereleases = true}
+geoh5py = {version = ">=0.12.0rc2, 0.12.*", allow-prereleases = true}
 #geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
 
 las-geoh5 = { version = ">=0.3.2rc1, 0.3.2.*", allow-prereleases = true}
