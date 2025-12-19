@@ -1011,4 +1011,4 @@ numpy = ">=1.7"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<4.0"
-content-hash = "0d603705eb8c4f1b78a01e46f6bd9282a43ca763cd1d2c4dd5bc54197e7f8cfb"
+content-hash = "030e61585e9091be79401fefe0ee1bfcced517485f6f7575ceb80cc240324915"
