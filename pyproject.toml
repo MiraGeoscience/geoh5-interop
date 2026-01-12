@@ -74,7 +74,7 @@ version = "0.0.0.dev0"
 geoh5py = {version = ">=0.12.0rc2, 0.12.*", allow-prereleases = true}
 #geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
 
-las-geoh5 = { version = ">=0.3.2rc1, 0.3.2.*", allow-prereleases = true}
+las-geoh5 = { version = ">=0.3.2rc1, 0.3.*", allow-prereleases = true}
 #las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "develop"}
 
 mira-omf = {version = ">=3.3.2rc1, 3.3.*", allow-prereleases = true}
