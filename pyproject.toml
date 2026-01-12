@@ -71,22 +71,22 @@ version = "0.0.0.dev0"
 
 [tool.poetry.dependencies]
 # geoh5py is a dependency of other apps: not strictly needed here, but good to ensure version
-geoh5py = {version = ">=0.12.0b1, <0.13.dev", allow-prereleases = true}
+geoh5py = {version = ">=0.12.0rc2, 0.12.*", allow-prereleases = true}
 #geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
 
-las-geoh5 = { version = ">=0.3.2b1, <0.4.dev", allow-prereleases = true}
+las-geoh5 = { version = ">=0.3.2rc1, 0.3.*", allow-prereleases = true}
 #las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "develop"}
 
-mira-omf = {version = ">=3.3.2b1, <3.4.dev", allow-prereleases = true}
+mira-omf = {version = ">=3.3.2rc1, 3.3.*", allow-prereleases = true}
 #mira-omf = {git = "https://github.com/MiraGeoscience/omf.git", rev = "develop"}
 
 [tool.poetry.group.dev.dependencies]
-packaging = '*'
+packaging = "*"
 Pygments = "*"
 pylint = ">=3.3.1"
 pytest = "*"
 pytest-cov = "*"
-pyyaml = '*'
+pyyaml = "*"
 
 [tool.conda-lock]
 platforms = ['win-64', 'linux-64']
@@ -111,18 +111,20 @@ style = "pep440"
 vcs = "git"
 
 [tool.poetry-dynamic-versioning.substitution]
-files = ["geoh5_interop/_version.py", "recipe.yaml"]
+files = ["geoh5_interop/_version.py", "_version.json"]
 patterns = [
-    { value = '''(^__version__\s*(?::.*?)?=\s*['"])[^'"]*(['"])''', mode = "str" },
-    { value = '''(^\s*version\s*(?::.*?)?:\s*['"])[^'"]*(['"])''', mode = "str" },
+    '''(^__version__\s*(?::.*?)?=\s*['"])[^'"]*(['"])''',
+    '''(^{\s*"version"\s*:\s*")[^"]*("\s*})''',
 ]
 
 [tool.poetry-dynamic-versioning.files."geoh5_interop/_version.py"]
 persistent-substitution = true
 initial-content = """
-  # Version placeholder that will be replaced during substitution
-  __version__ = "0.0.0"
+  __version__ = "0.0.0.dev0"
 """
 
-[tool.poetry-dynamic-versioning.files."recipe.yaml"]
+[tool.poetry-dynamic-versioning.files."_version.json"]
 persistent-substitution = true
+initial-content = """
+{ "version": "0.0.0.dev0" }
+"""

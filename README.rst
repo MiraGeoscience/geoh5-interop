@@ -65,4 +65,4 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Copyright
 ---------
 
-Copyright (c) 2024-2025 Mira Geoscience Ltd.
+Copyright (c) 2024-2026 Mira Geoscience Ltd.
