@@ -81,15 +81,20 @@ las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "dev
 mira-omf = {git = "https://github.com/MiraGeoscience/omf.git", rev = "develop"}
 
 [tool.poetry.group.dev.dependencies]
-packaging = '*'
+packaging = "*"
 Pygments = "*"
 pylint = ">=3.3.1"
 pytest = "*"
 pytest-cov = "*"
-pyyaml = '*'
+pyyaml = "*"
 
 [tool.conda-lock]
 platforms = ['win-64', 'linux-64']
+
+channels = [
+    'https://$GEOPY_PACKAGING_ARTIFACTORY_USER:$GEOPY_PACKAGING_ARTIFACTORY_TOKEN@mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev',
+    'conda-forge',  # with MAMBA_CHANNEL_ALIAS=https://repo.prefix.dev
+]
 
 [tool.conda-lock.dependencies]
 libblas = "*=*mkl"  # because simpeg already brings in the MKL
@@ -106,18 +111,20 @@ style = "pep440"
 vcs = "git"
 
 [tool.poetry-dynamic-versioning.substitution]
-files = ["geoh5_interop/_version.py", "recipe.yaml"]
+files = ["geoh5_interop/_version.py", "_version.json"]
 patterns = [
-    { value = '''(^__version__\s*(?::.*?)?=\s*['"])[^'"]*(['"])''', mode = "str" },
-    { value = '''(^\s*version\s*(?::.*?)?:\s*['"])[^'"]*(['"])''', mode = "str" },
+    '''(^__version__\s*(?::.*?)?=\s*['"])[^'"]*(['"])''',
+    '''(^{\s*"version"\s*:\s*")[^"]*("\s*})''',
 ]
 
 [tool.poetry-dynamic-versioning.files."geoh5_interop/_version.py"]
 persistent-substitution = true
 initial-content = """
-  # Version placeholder that will be replaced during substitution
-  __version__ = "0.0.0"
+  __version__ = "0.0.0.dev0"
 """
 
-[tool.poetry-dynamic-versioning.files."recipe.yaml"]
+[tool.poetry-dynamic-versioning.files."_version.json"]
 persistent-substitution = true
+initial-content = """
+{ "version": "0.0.0.dev0" }
+"""
