@@ -28,7 +28,7 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - geoh5py >=0.12.0rc2, 0.12.*
+    - geoh5py >=0.12.1rc1, 0.12.*
     - las-geoh5 >=0.3.2rc1, 0.3.*
     - mira-omf >=3.3.2rc1, 3.3.*
 
