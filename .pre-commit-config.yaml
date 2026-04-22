@@ -11,7 +11,7 @@ ci:
 
 repos:
 -   repo: https://github.com/python-poetry/poetry
-    rev: 2.2.1
+    rev: 2.3.2
     hooks:
     -   id: poetry-check
         args: [--no-plugins]
@@ -21,7 +21,7 @@ repos:
     -   id: pycln
         args: [--config=pyproject.toml]
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.3
+    rev: v0.15.9
     hooks:
     -   id: ruff
         args:
@@ -30,7 +30,7 @@ repos:
 #        -   --unsafe-fixes
     -   id: ruff-format
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.2
+    rev: v1.20.0
     hooks:
     -   id: mypy
         additional_dependencies: [
@@ -59,7 +59,7 @@ repos:
         types: [text]
         types_or: [python, pyi]
 -   repo: https://github.com/codespell-project/codespell
-    rev: v2.4.1
+    rev: v2.4.2
     hooks:
     -   id: codespell
         exclude: (\.lock|-lock\.ya?ml|\benvironments/.*\.ya?ml|\.ipynb|^THIRD_PARTY_SOFTWARE\.rst)$
