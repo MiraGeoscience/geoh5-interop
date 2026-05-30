@@ -13,7 +13,7 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [project]
 name = "geoh5-interop"
-requires-python = ">=3.10,<4.0"
+requires-python = ">=3.12,<3.15"
 
 description = "A meta-package that groups together packages for interoperability between GEOH5 and other file formats."
 license = "MIT"
@@ -71,13 +71,13 @@ version = "0.0.0.dev0"
 
 [tool.poetry.dependencies]
 # geoh5py is a dependency of other apps: not strictly needed here, but good to ensure version
-geoh5py = {version = ">=0.12.0, <0.14.dev", allow-prereleases = true}
+geoh5py = {version = ">=0.13.0b1, 0.13.*", allow-prereleases = true}
 #geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
 
-las-geoh5 = { version = ">=0.3.3a, <0.3.4.dev", allow-prereleases = true}
+las-geoh5 = { version = ">=0.3.3b1, 0.3.*", allow-prereleases = true}
 #las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "develop"}
 
-mira-omf = {version = ">=3.4.0a, <3.5.dev", allow-prereleases = true}
+mira-omf = {version = ">=3.4.0b1, 3.4.*", allow-prereleases = true}
 #mira-omf = {git = "https://github.com/MiraGeoscience/omf.git", rev = "develop"}
 
 [tool.poetry.group.dev.dependencies]
