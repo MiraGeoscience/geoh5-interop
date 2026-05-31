@@ -14,10 +14,11 @@ import json
 import re
 from pathlib import Path
 
-import geoh5_interop
 import pytest
 import yaml
 from packaging.version import Version
+
+import geoh5_interop
 
 
 def _get_json_version() -> str:
