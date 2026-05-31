@@ -31,22 +31,22 @@ jobs:
       contents: read
       pull-requests: read
     with:
-      package-manager: 'conda'
+      package-manager: 'pixi'
       virtual-repo-names: '["public-noremote-conda-dev"]'
       app-name: 'geoh5_interop'
-      python-version: '3.12'
+      pixi-environment: 'py312'
     secrets:
       JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
       JFROG_ARTIFACTORY_TOKEN: ${{ secrets.JFROG_ARTIFACTORY_TOKEN }}
-  call-workflow-pytest-poetry:
-    name: Pytest with Poetry
+  call-workflow-pytest-pypi:
+    name: Pytest with Git repos
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v3
     permissions:
       contents: read
       pull-requests: read
     with:
-      package-manager: 'poetry'
-      python-versions: '["3.12", "3.13", "3.14"]'
+      package-manager: 'pixi'
+      pixi-environments: '["py312", "py313", "py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
   call-workflow-pytest-conda:
@@ -56,12 +56,12 @@ jobs:
       contents: read
       pull-requests: read
     with:
-      package-manager: 'conda'
+      package-manager: 'pixi'
       virtual-repo-names: '["public-noremote-conda-dev"]'
-      python-versions: '["3.12", "3.13", "3.14"]'
+      pixi-environments: '["conda-py312", "conda-py313", "conda-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
-      codecov-reference-python-version: '3.12'
+      codecov-reference-python-version: 'conda-py312'
       codecov-reference-os: '["windows-latest"]'
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
