@@ -7,14 +7,13 @@
 #  (see LICENSE file at the root of this source code package).                    '
 # '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-
 from __future__ import annotations
 
 import importlib
-from pathlib import Path
-
 import json
 import re
+from pathlib import Path
+
 import pytest
 import yaml
 from packaging.version import Version

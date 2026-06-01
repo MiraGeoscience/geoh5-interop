@@ -1,0 +1,112 @@
+[workspace]
+requires-pixi = ">=0.54"
+# Static version required by pixi-build-python (no dynamic versioning support).
+# Keep in sync with POETRY_DYNAMIC_VERSIONING_OVERRIDE in [activation].
+
+channels = ["https://repo.prefix.dev/conda-forge"]
+platforms = ["win-64", "linux-64"]
+preview = ["pixi-build"]
+
+[package.build.backend]
+name = "pixi-build-rattler-build"
+version = "*"
+channels = ["https://repo.prefix.dev/conda-forge"]
+
+[package.build.config]
+experimental = true
+
+[activation]
+# do not use dynamic versioning with this source editable package,
+# or version changes with each commit and pixi.lock is detected as out-of-date
+env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
+
+[dependencies]
+# no default Conda dependencies. See feature "self-built"
+
+[pypi-dependencies]
+# no default PyPI dependencies. See feature "self"
+
+[environments]
+pip-py312 = {features = ["py312", "self"]}
+pip-py313 = {features = ["py313", "self"]}
+pip-py314 = {features = ["py314", "self"]}
+
+py312 = {features = ["py312", "self", "mirageo-git", "test", "lint"], solve-group = "default"}
+py313 = {features = ["py313", "self", "mirageo-git", "test", "lint"], solve-group = "py313"}
+py314 = {features = ["py314", "self", "mirageo-git", "test", "lint"], solve-group = "py314"}
+
+default = {features = ["py312", "self", "mirageo-git", "test", "dev", "lint"], solve-group = "default"}
+
+# no default features to avoid pulling direct dependency also from PyPI
+conda-py312 = {features = ["py312", "mirageo", "test", "lint"], solve-group = "default"}
+conda-py313 = {features = ["py313", "mirageo", "test", "lint"], solve-group = "py313"}
+conda-py314 = {features = ["py314", "mirageo", "test", "lint"], solve-group = "py314"}
+
+conda-rt-py312 = {features = ["py312", "mirageo"], solve-group = "default"}
+conda-rt-py313 = {features = ["py313", "mirageo"], solve-group = "py313"}
+conda-rt-py314 = {features = ["py314", "mirageo"], solve-group = "py314"}
+
+[feature.py312.dependencies]
+python = "3.12.*"
+
+[feature.py313.dependencies]
+python = "3.13.*"
+
+[feature.py314.dependencies]
+python = "3.14.*"
+
+[feature.self.pypi-dependencies]
+geoh5-interop = {path = ".", editable = true}
+
+# [feature.self-built.dependencies]
+# geoh5-interop = {path = "."}
+
+[feature.mirageo-git.pypi-dependencies]
+geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/GA_4.8" }
+las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/GA_4.8" }
+mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/GA_4.8" }
+
+[feature.mirageo]
+# Authenticate beforehand to access private channels:
+#    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
+channels = [
+    "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
+    "https://repo.prefix.dev/conda-forge",
+]
+
+[feature.mirageo.dependencies]
+geoh5py = ">=0.13.0b1, 0.13.*"
+las-geoh5 = ">=0.3.3b1, 0.3.*"
+mira-omf = ">=3.4.0b1, 3.4.*"
+
+[feature.dev.dependencies]
+docutils = "*"
+ipython = "*"
+pixi-pycharm = ">=0.0.10,<0.0.11"
+pygments = "*"
+
+[feature.dev.tasks]
+repl = {description = "Launch interactive Python shell (IPython)", cmd = "ipython"}
+
+[feature.test.dependencies]
+packaging = "*"
+pytest = "*"
+pytest-cov = "*"
+pyyaml = "*"
+
+[feature.lint.dependencies]
+pylint = "4.*"
+
+[feature.lint.tasks]
+lint = {cmd = "pylint", description = "Run pylint"}
+
+[feature.test.tasks]
+test = {cmd = "pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
+
+[tasks.test-pyvers]
+description = "Run tests across all Python versions (3.12, 3.13, 3.14)"
+depends-on = [
+    {task = "test", environment = "py312"},
+    {task = "test", environment = "py313"},
+    {task = "test", environment = "py314"},
+]

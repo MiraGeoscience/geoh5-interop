@@ -13,7 +13,7 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [project]
 name = "geoh5-interop"
-requires-python = ">=3.10,<4.0"
+requires-python = ">=3.12,<3.15"
 
 description = "A meta-package that groups together packages for interoperability between GEOH5 and other file formats."
 license = "MIT"
@@ -23,7 +23,14 @@ license-files = [
 readme = "README.rst"
 authors = [{ name = "Mira Geoscience", email = "support@mirageoscience.com" }]
 
-dynamic = ["version", "dependencies", "classifiers"]
+dynamic = ["version", "classifiers"]
+# version = "0.0.0.dev0"
+
+dependencies = [
+    "geoh5py >=0.13.0b1, ==0.13.*",
+    "las-geoh5 >=0.3.3b1, ==0.3.*",
+    "mira-omf >=3.4.0b1, ==3.4.*",
+]
 
 keywords = [
     "data format",
@@ -69,36 +76,6 @@ include = [
 ]
 version = "0.0.0.dev0"
 
-[tool.poetry.dependencies]
-# geoh5py is a dependency of other apps: not strictly needed here, but good to ensure version
-geoh5py = {version = ">=0.12.0, <0.14.dev", allow-prereleases = true}
-#geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "develop"}
-
-las-geoh5 = { version = ">=0.3.3a, <0.3.4.dev", allow-prereleases = true}
-#las-geoh5 = {git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "develop"}
-
-mira-omf = {version = ">=3.4.0a, <3.5.dev", allow-prereleases = true}
-#mira-omf = {git = "https://github.com/MiraGeoscience/omf.git", rev = "develop"}
-
-[tool.poetry.group.dev.dependencies]
-packaging = "*"
-Pygments = "*"
-pylint = ">=3.3.1"
-pytest = "*"
-pytest-cov = "*"
-pyyaml = "*"
-
-[tool.conda-lock]
-platforms = ['win-64', 'linux-64']
-
-channels = [
-    'https://$GEOPY_PACKAGING_ARTIFACTORY_USER:$GEOPY_PACKAGING_ARTIFACTORY_TOKEN@mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev',
-    'conda-forge',  # with MAMBA_CHANNEL_ALIAS=https://repo.prefix.dev
-]
-
-[tool.conda-lock.dependencies]
-libblas = "*=*mkl"  # because simpeg already brings in the MKL
-
 [tool.poetry.requires-plugins]
 poetry-dynamic-versioning = { version = ">=1.9.1,<2.0.0", extras = ["plugin"] }
 
@@ -128,3 +105,88 @@ persistent-substitution = true
 initial-content = """
 { "version": "0.0.0.dev0" }
 """
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+ignore = [
+    "B028",  # no-explicit-stacklevel for warnings.warn()
+    "E501",  # line-too-long - code is reformatted (do not care about comments and docstring)
+    "F401",  # unused-import - covered by pycln
+    "RUF005",  # collection-literal-concatenation - wrong suggestion with numpy arrays
+]
+select = [
+    "A",  # flake8-builtins
+    "B",  # flake8-bugbear
+    "B006",  # Do not use mutable data structures for argument defaults
+    "B9",  # flake8-bugbear opinionated warnings
+    "BLE",  # flake8-blind-except
+    "C4",  # flake8-comprehensions
+    "C9",  # mccabe
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+    "RUF",  # ruff rules
+    "TID", # flake8-tidy-imports
+    "UP",  # pyupgrade
+    "W",  # pycodestyle warnings
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 18
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.ruff.format]
+# default formatting is just fine
+
+[tool.mypy]
+warn_unused_configs = true
+ignore_missing_imports = true
+scripts_are_modules = true
+show_error_context = true
+show_column_numbers = true
+check_untyped_defs = true
+
+[tool.pylint.main]
+fail-on = ["F", "E", "W"]
+fail-under = 10
+jobs = 0
+
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "x", "y", "z", "ex", "Run", "id", "_"]
+
+[tool.pylint.design]
+max-args = 9  # Maximum number of arguments for function / method.
+              # (as long as not hitting too-many-positional-arguments)
+max-attributes = 10  # Maximum number of attributes for a class (see R0902).
+max-bool-expr = 6  # Maximum number of boolean expressions in an if statement (see R0916).
+max-branches = 13  # Maximum number of branch for function / method body.
+max-locals = 18  # Maximum number of locals for function / method body.
+max-public-methods = 21  # Maximum number of public methods for a class (see R0904).
+max-statements = 65  # Maximum number of statements in function / method body.
+min-public-methods = 1  # Minimum number of public methods for a class (see R0903).
+
+[tool.pylint."messages control"]
+disable = [
+    "raw-checker-failed",
+    "bad-inline-option",
+    "locally-disabled",
+    "file-ignored",
+    "suppressed-message",
+    "useless-suppression",
+    "deprecated-pragma",
+    "use-symbolic-message-instead",
+    "use-implicit-booleaness-not-comparison-to-string",
+    "use-implicit-booleaness-not-comparison-to-zero",
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "missing-class-docstring",
+    "fixme",
+]
+enable = ["c-extension-no-member"]
+
+[tool.pylint.similarities]
+min-similarity-lines = 7
