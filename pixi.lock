@@ -2721,7 +2721,7 @@ packages:
 - pypi: ./
   name: geoh5-interop
   version: 0.0.0.dev0+local
-  sha256: 448f49362b4301a2f6d8657ed944a754dc3e312f38e66796c9e783de88a30fe0
+  sha256: 373bde11d83d6b3a05b55c3b70d2a898d35a60028ad52c862b4b4da2e309356d
   requires_dist:
   - geoh5py>=0.13.0b1,<0.14.dev0
   - las-geoh5>=0.3.3b1,<0.4.dev0
