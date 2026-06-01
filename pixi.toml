@@ -24,7 +24,7 @@ env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
 # no default Conda dependencies. See feature "self-built"
 
 [pypi-dependencies]
-# no default Conda dependencies. See feature "self"
+# no default PyPI dependencies. See feature "self"
 
 [environments]
 pip-py312 = {features = ["py312", "self"]}

@@ -113,14 +113,14 @@ target-version = "py312"
 ignore = [
     "B028",  # no-explicit-stacklevel for warnings.warn()
     "E501",  # line-too-long - code is reformatted (do not care about comments and docstring)
-    "F401",  # unsused-import - covered by pycln
+    "F401",  # unused-import - covered by pycln
     "RUF005",  # collection-literal-concatenation - wrong suggestion with numpy arrays
 ]
 select = [
     "A",  # flake8-builtins
     "B",  # flake8-bugbear
     "B006",  # Do not use mutable data structures for argument defaults
-    "B9",  # flake8-bugbear opiniated warnings
+    "B9",  # flake8-bugbear opinionated warnings
     "BLE",  # flake8-blind-except
     "C4",  # flake8-comprehensions
     "C9",  # mccabe
