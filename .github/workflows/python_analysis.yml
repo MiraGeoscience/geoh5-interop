@@ -34,6 +34,7 @@ jobs:
       package-manager: 'pixi'
       virtual-repo-names: '["public-noremote-conda-dev"]'
       app-name: 'geoh5_interop'
+      pixi-version: latest
       pixi-environment: 'py312'
     secrets:
       JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
@@ -46,6 +47,7 @@ jobs:
       pull-requests: read
     with:
       package-manager: 'pixi'
+      pixi-version: latest
       pixi-environments: '["py312", "py313", "py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
