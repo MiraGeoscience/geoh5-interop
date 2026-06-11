@@ -24,11 +24,20 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  PIXI_VERSION: '0.70.2'
+  PIXI_VERSION: 'v0.70.2'
 
 jobs:
+  pixi-options:
+    name: Set pixi version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.set-pixi-version.outputs.version }}
+    steps:
+      - id: set-pixi-version
+        run: echo "version=${{ env.PIXI_VERSION }}" >> $GITHUB_OUTPUT
   call-workflow-static-analysis:
     name: Static analysis
+    needs: pixi-options
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-static_analysis.yml@v3.8.0-alpha.1
     permissions:
       contents: read
@@ -37,25 +46,27 @@ jobs:
       package-manager: 'pixi'
       virtual-repo-names: '["public-noremote-conda-dev"]'
       app-name: 'geoh5_interop'
-      pixi-version: '${{ env.PIXI_VERSION }}'
+      pixi-version: ${{ needs.pixi-options.outputs.version }}
       pixi-environment: 'py312'
     secrets:
       JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
       JFROG_ARTIFACTORY_TOKEN: ${{ secrets.JFROG_ARTIFACTORY_TOKEN }}
   call-workflow-pytest-pypi:
     name: Pytest with Git repos
+    needs: pixi-options
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v3.8.0-alpha.1
     permissions:
       contents: read
       pull-requests: read
     with:
       package-manager: 'pixi'
-      pixi-version: '${{ env.PIXI_VERSION }}'
+      pixi-version: ${{ needs.pixi-options.outputs.version }}
       pixi-environments: '["py312", "py313", "py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
   call-workflow-pytest-conda:
     name: Pytest with Conda
+    needs: pixi-options
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v3.8.0-alpha.1
     permissions:
       contents: read
@@ -63,7 +74,7 @@ jobs:
     with:
       package-manager: 'pixi'
       virtual-repo-names: '["public-noremote-conda-dev"]'
-      pixi-version: '${{ env.PIXI_VERSION }}'
+      pixi-version: ${{ needs.pixi-options.outputs.version }}
       pixi-environments: '["conda-py312", "conda-py313", "conda-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
