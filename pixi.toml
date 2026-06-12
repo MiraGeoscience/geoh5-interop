@@ -1,8 +1,5 @@
 [workspace]
 requires-pixi = ">=0.54"
-# Static version required by pixi-build-python (no dynamic versioning support).
-# Keep in sync with POETRY_DYNAMIC_VERSIONING_OVERRIDE in [activation].
-
 channels = ["https://repo.prefix.dev/conda-forge"]
 platforms = ["win-64", "linux-64"]
 preview = ["pixi-build"]
