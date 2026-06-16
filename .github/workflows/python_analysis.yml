@@ -44,14 +44,10 @@ jobs:
       pull-requests: read
     with:
       package-manager: 'pixi'
-      virtual-repo-names: '["public-noremote-conda-dev"]'
       app-name: 'geoh5_interop'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
-      pixi-environment: 'py312'
-    secrets:
-      JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
-      JFROG_ARTIFACTORY_TOKEN: ${{ secrets.JFROG_ARTIFACTORY_TOKEN }}
-  call-workflow-pytest-pypi:
+      pixi-environment: 'git-mira'
+  call-workflow-pytest-github:
     name: Pytest with Git repos
     needs: pixi-options
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v3
@@ -61,11 +57,11 @@ jobs:
     with:
       package-manager: 'pixi'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
-      pixi-environments: '["py312", "py313", "py314"]'
+      pixi-environments: '["git-mira", "git-mira-py313", "git-mira-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
   call-workflow-pytest-conda:
-    name: Pytest with Conda
+    name: Pytest with Mira Conda
     needs: pixi-options
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@v3
     permissions:
@@ -73,12 +69,11 @@ jobs:
       pull-requests: read
     with:
       package-manager: 'pixi'
-      virtual-repo-names: '["public-noremote-conda-dev"]'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
-      pixi-environments: '["conda-py312", "conda-py313", "conda-py314"]'
+      pixi-environments: '["conda-mira", "conda-mira-py313", "conda-mira-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
-      codecov-reference-python-version: 'conda-py312'
+      codecov-reference-python-version: 'conda-mira'
       codecov-reference-os: '["windows-latest"]'
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

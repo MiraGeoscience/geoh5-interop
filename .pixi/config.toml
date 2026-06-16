@@ -1,0 +1,2 @@
+[repodata-config."https://mirageoscienceltd.jfrog.io"]
+disable-sharded = true
