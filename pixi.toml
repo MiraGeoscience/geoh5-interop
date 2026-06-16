@@ -24,26 +24,34 @@ env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
 # no default PyPI dependencies. See feature "self"
 
 [environments]
-pip-py312 = {features = ["py312", "self"]}
-pip-py313 = {features = ["py313", "self"]}
-pip-py314 = {features = ["py314", "self"]}
+# use "self" to ensure dependency versions from this local package are properly unified with Conda (as per conda-rt through the solve-group)
+default = { features = ["py-default", "self", "dev", "mira-git", "test", "lint"], solve-group = "default" }
+# testing environments with lint and pytest but no additional dev dependencies
+git-mira = { features = ["py-default", "self", "mira-git", "test", "lint"], solve-group = "default" }
+git-mira-py313 = { features = ["py313", "self", "mira-git", "test", "lint"], solve-group = "py313" }
+git-mira-py314 = { features = ["py314", "self", "mira-git", "test", "lint"], solve-group = "py314" }
 
-py312 = {features = ["py312", "self", "mirageo-git", "test", "lint"], solve-group = "default"}
-py313 = {features = ["py313", "self", "mirageo-git", "test", "lint"], solve-group = "py313"}
-py314 = {features = ["py314", "self", "mirageo-git", "test", "lint"], solve-group = "py314"}
+# ensures Conda packages are resolved the same way for test and runtime environments:
+# 1. share solve group with envs using "mira-git"
+# 2. do not use conda-pypi mapping for mira-channels, to keep git (PyPI) and Conda independent in same solve group
+# 3. do not use "self", not to bring in the git packages
+conda-mira = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "default"}
+conda-mira-py313 = { features = ["py313", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py313"}
+conda-mira-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py314"}
+# the environment for distribution, with no dev, lint or test dependencies
+conda-mira-rt = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt"], solve-group = "default"}
 
-default = {features = ["py312", "self", "mirageo-git", "test", "dev", "lint"], solve-group = "default"}
+pypi-mira-rt = ["py-default", "self", "mira-pypi-index", "conda-rt"]
 
-# no default features to avoid pulling direct dependency also from PyPI
-conda-py312 = {features = ["py312", "mirageo", "test", "lint"], solve-group = "default"}
-conda-py313 = {features = ["py313", "mirageo", "test", "lint"], solve-group = "py313"}
-conda-py314 = {features = ["py314", "mirageo", "test", "lint"], solve-group = "py314"}
+# uncomment below once Mira dependencies versions are published on PyPI
+pypi-rt = ["py-default", "self", "conda-rt"]
 
-conda-rt-py312 = {features = ["py312", "mirageo"], solve-group = "default"}
-conda-rt-py313 = {features = ["py313", "mirageo"], solve-group = "py313"}
-conda-rt-py314 = {features = ["py314", "mirageo"], solve-group = "py314"}
+# uncomment below once Mira dependencies versions are published on conda-forge
+# conda-rt = ["py-default", "self", "mira-conda", "conda-rt"]
 
-[feature.py312.dependencies]
+pylint-only = {features = ["py-default", "test", "lint"], no-default-feature = true}
+
+[feature.py-default.dependencies]
 python = "3.12.*"
 
 [feature.py313.dependencies]
@@ -58,23 +66,32 @@ geoh5-interop = {path = ".", editable = true}
 # [feature.self-built.dependencies]
 # geoh5-interop = {path = "."}
 
-[feature.mirageo-git.pypi-dependencies]
-geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/GA_4.8" }
-las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/GA_4.8" }
-mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/GA_4.8" }
+[feature.mira-pypi-index.pypi-options]
+# private PyPI index still needed to resolve non-published versions and unify with Conda packages
+extra-index-urls = [
+    "https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/simple"
+]
 
-[feature.mirageo]
+[feature.mira-channels]
 # Authenticate beforehand to access private channels:
 #    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
 channels = [
     "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
-    "https://repo.prefix.dev/conda-forge",
 ]
 
-[feature.mirageo.dependencies]
+[feature.mira-conda.dependencies]
 geoh5py = ">=0.13.0b1, 0.13.*"
 las-geoh5 = ">=0.3.3b1, 0.3.*"
 mira-omf = ">=3.4.0b1, 3.4.*"
+
+[feature.mira-git.pypi-dependencies]
+geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/GA_4.8" }
+las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/GA_4.8" }
+mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/GA_4.8" }
+
+[feature.conda-rt.dependencies]
+# runtime dependencies, except Mira packages
+# (None)
 
 [feature.dev.dependencies]
 docutils = "*"
@@ -101,9 +118,9 @@ lint = {cmd = "pylint", description = "Run pylint"}
 test = {cmd = "pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
 
 [tasks.test-pyvers]
-description = "Run tests across all Python versions (3.12, 3.13, 3.14)"
+description = "Run tests across all Python versions"
 depends-on = [
-    {task = "test", environment = "py312"},
-    {task = "test", environment = "py313"},
-    {task = "test", environment = "py314"},
+    {task = "test", environment = "git-mira"},
+    {task = "test", environment = "git-mira-py313"},
+    {task = "test", environment = "git-mira-py314"},
 ]
