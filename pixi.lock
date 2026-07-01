@@ -22,7 +22,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/dill-0.4.1-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/h5py-3.15.1-nompi_py312ha4f8f14_101.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/hdf5-1.14.6-nompi_h19486de_110.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/importlib-metadata-9.0.0-pyhcf101f3_0.conda
@@ -30,7 +30,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/isort-8.0.1-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/keyutils-1.6.3-hb9d3cd8_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/krb5-1.22.2-ha1258a1_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/lcms2-2.19.1-h0c24ade_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ld_impl_linux-64-2.45.1-default_hbd61a6d_102.conda
@@ -62,13 +62,13 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ncurses-6.6-hdb14827_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/numpy-2.4.6-py312h33ff503_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/openjpeg-2.5.4-h55fea9a_0.conda
@@ -87,7 +87,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.12.13-hd63d673_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -125,14 +125,14 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/dill-0.4.1-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/h5py-3.15.1-nompi_py312h03cd2ba_101.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/hdf5-1.14.6-nompi_hae35d4c_110.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/importlib-metadata-9.0.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/isort-8.0.1-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/krb5-1.22.2-h0ea6238_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lcms2-2.19.1-hf2c6c5f_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lerc-4.1.0-hd936e49_0.conda
@@ -164,7 +164,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/libzlib-1.3.2-hfd05255_2.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/llvm-openmp-22.1.7-h4fa8253_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/mkl-2026.0.0-hac47afa_908.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/numpy-2.4.6-py312ha3f287d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/onemkl-license-2026.0.0-h57928b3_908.conda
@@ -184,7 +184,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.12.13-h0159041_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -235,7 +235,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/dill-0.4.1-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/h5py-3.15.1-nompi_py313h253c126_101.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/hdf5-1.14.6-nompi_h19486de_110.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/importlib-metadata-9.0.0-pyhcf101f3_0.conda
@@ -243,7 +243,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/isort-8.0.1-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/keyutils-1.6.3-hb9d3cd8_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/krb5-1.22.2-ha1258a1_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/lcms2-2.19.1-h0c24ade_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ld_impl_linux-64-2.45.1-default_hbd61a6d_102.conda
@@ -275,12 +275,12 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ncurses-6.6-hdb14827_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/numpy-2.4.6-py313hf6604e3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/openjpeg-2.5.4-h55fea9a_0.conda
@@ -299,7 +299,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.13.14-h6add32d_100_cp313.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -337,14 +337,14 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/dill-0.4.1-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/h5py-3.15.1-nompi_py313hf7f959b_101.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/hdf5-1.14.6-nompi_hae35d4c_110.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/importlib-metadata-9.0.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/isort-8.0.1-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/krb5-1.22.2-h0ea6238_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lcms2-2.19.1-hf2c6c5f_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lerc-4.1.0-hd936e49_0.conda
@@ -377,7 +377,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/libzlib-1.3.2-hfd05255_2.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/llvm-openmp-22.1.7-h4fa8253_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/mkl-2026.0.0-hac47afa_908.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/numpy-2.4.6-py313ha8dc839_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/onemkl-license-2026.0.0-h57928b3_908.conda
@@ -397,7 +397,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.13.14-h09917c8_100_cp313.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -448,7 +448,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/dill-0.4.1-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/h5py-3.15.1-nompi_py314hc32fe06_101.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/hdf5-1.14.6-nompi_h19486de_110.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/importlib-metadata-9.0.0-pyhcf101f3_0.conda
@@ -456,7 +456,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/isort-8.0.1-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/keyutils-1.6.3-hb9d3cd8_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/krb5-1.22.2-ha1258a1_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/lcms2-2.19.1-h0c24ade_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ld_impl_linux-64-2.45.1-default_hbd61a6d_102.conda
@@ -488,12 +488,12 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ncurses-6.6-hdb14827_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/numpy-2.4.6-py314h2b28147_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/openjpeg-2.5.4-h55fea9a_0.conda
@@ -512,7 +512,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.14.6-habeac84_100_cp314.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -550,14 +550,14 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/dill-0.4.1-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/h5py-3.15.1-nompi_py314hc249e69_101.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/hdf5-1.14.6-nompi_hae35d4c_110.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/importlib-metadata-9.0.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/isort-8.0.1-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/krb5-1.22.2-h0ea6238_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lcms2-2.19.1-hf2c6c5f_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lerc-4.1.0-hd936e49_0.conda
@@ -590,7 +590,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/libzlib-1.3.2-hfd05255_2.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/llvm-openmp-22.1.7-h4fa8253_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/mkl-2026.0.0-hac47afa_908.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/numpy-2.4.6-py314h02f10f6_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/onemkl-license-2026.0.0-h57928b3_908.conda
@@ -610,7 +610,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.14.6-h4b44e0e_100_cp314.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -656,12 +656,12 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/cached_property-1.5.2-pyha770c72_1.tar.bz2
       - conda: https://repo.prefix.dev/conda-forge/noarch/chardet-7.4.3-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/h5py-3.15.1-nompi_py312ha4f8f14_101.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/hdf5-1.14.6-nompi_h19486de_110.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/keyutils-1.6.3-hb9d3cd8_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/krb5-1.22.2-ha1258a1_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/lcms2-2.19.1-h0c24ade_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ld_impl_linux-64-2.45.1-default_hbd61a6d_102.conda
@@ -693,12 +693,12 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ncurses-6.6-hdb14827_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/numpy-2.4.6-py312h33ff503_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/openjpeg-2.5.4-h55fea9a_0.conda
@@ -739,11 +739,11 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/chardet-7.4.3-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/colorama-0.4.6-pyhd8ed1ab_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/et_xmlfile-2.0.0-pyhd8ed1ab_1.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/h5py-3.15.1-nompi_py312h03cd2ba_101.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/hdf5-1.14.6-nompi_hae35d4c_110.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/krb5-1.22.2-h0ea6238_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/lasio-0.32-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lcms2-2.19.1-hf2c6c5f_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/lerc-4.1.0-hd936e49_0.conda
@@ -774,7 +774,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/libxml2-2.15.3-hbc0d294_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/libzlib-1.3.2-hfd05255_2.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/llvm-openmp-22.1.7-h4fa8253_0.conda
-      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
+      - conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/mkl-2026.0.0-hac47afa_908.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/numpy-2.4.6-py312ha3f287d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/onemkl-license-2026.0.0-h57928b3_908.conda
@@ -880,7 +880,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
@@ -911,7 +911,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.12.13-hd63d673_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -939,7 +939,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
       win-64:
@@ -1024,7 +1024,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.12.13-h0159041_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1057,7 +1057,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
   git-mira:
@@ -1122,7 +1122,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
@@ -1146,7 +1146,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.12.13-hd63d673_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1171,7 +1171,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
       win-64:
@@ -1244,7 +1244,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.12.13-h0159041_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1274,7 +1274,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
   git-mira-py313:
@@ -1339,7 +1339,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
@@ -1362,7 +1362,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.13.14-h6add32d_100_cp313.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1387,7 +1387,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
       win-64:
@@ -1461,7 +1461,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.13.14-h09917c8_100_cp313.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1491,7 +1491,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
   git-mira-py314:
@@ -1556,7 +1556,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libssh2-1.11.1-hcf80075_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_19.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libtiff-4.7.1-h9d88235_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
@@ -1579,7 +1579,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.14.6-habeac84_100_cp314.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1604,7 +1604,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
       win-64:
@@ -1678,7 +1678,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pypng-0.20220715.0-pyhd8ed1ab_1.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.14.6-h4b44e0e_100_cp314.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhe01879c_2.conda
@@ -1708,7 +1708,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8#37016b8cbe1db7d880c9c2ae724d48ab09962c28
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
       - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
       - pypi: ./
   pylint-only:
@@ -1738,7 +1738,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/liblzma-5.8.3-hb03c661_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libnsl-2.0.1-hb9d3cd8_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libsqlite-3.53.2-h0c1763c_0.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/mccabe-0.7.0-pyhd8ed1ab_1.conda
@@ -1749,7 +1749,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pluggy-1.6.0-pyhf9edf01_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/python-3.12.13-hd63d673_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python_abi-3.12-8_cp312.conda
@@ -1786,7 +1786,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/pluggy-1.6.0-pyhf9edf01_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
-      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/python-3.12.13-h0159041_0_cpython.conda
       - conda: https://repo.prefix.dev/conda-forge/noarch/python_abi-3.12-8_cp312.conda
@@ -1824,7 +1824,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/liblzma-5.8.3-hb03c661_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libnsl-2.0.1-hb9d3cd8_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libsqlite-3.53.2-h0c1763c_0.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ncurses-6.6-hdb14827_0.conda
@@ -1835,11 +1835,11 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/tzdata-2025c-hc9c84f9_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl
-      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/geoh5py/0.13.0b2/geoh5py-0.13.0b2-py3-none-any.whl
+      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/geoh5py/0.13.0/geoh5py-0.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3a/30/d1c94066343a98bb2cea40120873193a4fed68c4ad7f8935c11caf74c681/h5py-3.15.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
-      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/las-geoh5/0.3.3b1/las_geoh5-0.3.3b1-py3-none-any.whl
+      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/las-geoh5/0.3.3/las_geoh5-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/da/53/7dbbcacaee53dbb6b7dabd83c5e7de0bc613db343175e694da61404a1264/lasio-0.32-py3-none-any.whl
-      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/mira-omf/3.4.0b2/mira_omf-3.4.0b2-py3-none-any.whl
+      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/mira-omf/3.4.0/mira_omf-3.4.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/99/60/14115e6364fa676c5397c2ad3004e527e9aa487abf5d0706ec81bbd08529/numpy-2.4.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/43/e3/fdc657359e919462369869f1c9f0e973f353f9a9ee295a39b1fea8ee1a77/pillow-12.2.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/c0/9a/cd2def3421cd077d80d4973c802d29dcb3fba625190b3678480f228a85bf/properties-0.6.1.tar.gz
@@ -1872,11 +1872,11 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/vcomp14-14.51.36231-h1b9f54f_39.conda
       - pypi: https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl
-      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/geoh5py/0.13.0b2/geoh5py-0.13.0b2-py3-none-any.whl
+      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/geoh5py/0.13.0/geoh5py-0.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/cf/51/329e7436bf87ca6b0fe06dd0a3795c34bebe4ed8d6c44450a20565d57832/h5py-3.15.1-cp312-cp312-win_amd64.whl
-      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/las-geoh5/0.3.3b1/las_geoh5-0.3.3b1-py3-none-any.whl
+      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/las-geoh5/0.3.3/las_geoh5-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/da/53/7dbbcacaee53dbb6b7dabd83c5e7de0bc613db343175e694da61404a1264/lasio-0.32-py3-none-any.whl
-      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/mira-omf/3.4.0b2/mira_omf-3.4.0b2-py3-none-any.whl
+      - pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/mira-omf/3.4.0/mira_omf-3.4.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ab/ca/feab00bd44aa5fe1ad2c18f08b4d3bb92e26484b0b1d1443897809ed528c/numpy-2.4.6-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/5d/7b/25a221d2c761c6a8ae21bfa3874988ff2583e19cf8a27bf2fee358df7942/pillow-12.2.0-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/c0/9a/cd2def3421cd077d80d4973c802d29dcb3fba625190b3678480f228a85bf/properties-0.6.1.tar.gz
@@ -1912,7 +1912,7 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/liblzma-5.8.3-hb03c661_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libnsl-2.0.1-hb9d3cd8_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libsqlite-3.53.2-h0c1763c_0.conda
-      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
+      - conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_2.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/ncurses-6.6-hdb14827_0.conda
@@ -1923,11 +1923,11 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/noarch/tzdata-2025c-hc9c84f9_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/82/ea/5edabd6cd2fc4c2c6bbd085354a59547305f9bf851a48c3bec05a30f8d87/geoh5py-0.13.0b2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/33/f8/7c998103aab05a4ee16206d6681ccb7ce0dac85d42cc9b390f8b79c20526/geoh5py-0.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3a/30/d1c94066343a98bb2cea40120873193a4fed68c4ad7f8935c11caf74c681/h5py-3.15.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
-      - pypi: https://files.pythonhosted.org/packages/a8/99/0df40354f6f9aa4c253a9e1a5914145766418f770f83b334def407d34eb1/las_geoh5-0.3.3b1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/45/66/a084a219ed9878f993b7d3d72fe8d93a42e26aac4d95e2ce8d823458095d/las_geoh5-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/da/53/7dbbcacaee53dbb6b7dabd83c5e7de0bc613db343175e694da61404a1264/lasio-0.32-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/d6/bf/84289c2299d35fc8d1151a43ffe65baad91737f8c383bb1e0dbcf3a3992b/mira_omf-3.4.0b1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cb/43/0f37bfc8cf384b69709508d78a5419f7955f14e1a779d34f1477686c92dc/mira_omf-3.4.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/99/60/14115e6364fa676c5397c2ad3004e527e9aa487abf5d0706ec81bbd08529/numpy-2.4.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/43/e3/fdc657359e919462369869f1c9f0e973f353f9a9ee295a39b1fea8ee1a77/pillow-12.2.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/c0/9a/cd2def3421cd077d80d4973c802d29dcb3fba625190b3678480f228a85bf/properties-0.6.1.tar.gz
@@ -1960,11 +1960,11 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/vcomp14-14.51.36231-h1b9f54f_39.conda
       - pypi: https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/82/ea/5edabd6cd2fc4c2c6bbd085354a59547305f9bf851a48c3bec05a30f8d87/geoh5py-0.13.0b2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/33/f8/7c998103aab05a4ee16206d6681ccb7ce0dac85d42cc9b390f8b79c20526/geoh5py-0.13.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/cf/51/329e7436bf87ca6b0fe06dd0a3795c34bebe4ed8d6c44450a20565d57832/h5py-3.15.1-cp312-cp312-win_amd64.whl
-      - pypi: https://files.pythonhosted.org/packages/a8/99/0df40354f6f9aa4c253a9e1a5914145766418f770f83b334def407d34eb1/las_geoh5-0.3.3b1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/45/66/a084a219ed9878f993b7d3d72fe8d93a42e26aac4d95e2ce8d823458095d/las_geoh5-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/da/53/7dbbcacaee53dbb6b7dabd83c5e7de0bc613db343175e694da61404a1264/lasio-0.32-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/d6/bf/84289c2299d35fc8d1151a43ffe65baad91737f8c383bb1e0dbcf3a3992b/mira_omf-3.4.0b1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cb/43/0f37bfc8cf384b69709508d78a5419f7955f14e1a779d34f1477686c92dc/mira_omf-3.4.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ab/ca/feab00bd44aa5fe1ad2c18f08b4d3bb92e26484b0b1d1443897809ed528c/numpy-2.4.6-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/5d/7b/25a221d2c761c6a8ae21bfa3874988ff2583e19cf8a27bf2fee358df7942/pillow-12.2.0-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/c0/9a/cd2def3421cd077d80d4973c802d29dcb3fba625190b3678480f228a85bf/properties-0.6.1.tar.gz
@@ -2394,10 +2394,10 @@ packages:
   - psutil>=7.2.2,<7.3.0
   - pydantic>=2.12.0,<2.13.0
   requires_python: '>=3.12,<3.15'
-- pypi: https://files.pythonhosted.org/packages/82/ea/5edabd6cd2fc4c2c6bbd085354a59547305f9bf851a48c3bec05a30f8d87/geoh5py-0.13.0b2-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/33/f8/7c998103aab05a4ee16206d6681ccb7ce0dac85d42cc9b390f8b79c20526/geoh5py-0.13.0-py3-none-any.whl
   name: geoh5py
-  version: 0.13.0b2
-  sha256: 89359d8d71027ea4a55b978ed8c2d6145fe67c4092afa2bbe7d90e6a0ceb19b7
+  version: 0.13.0
+  sha256: e9556cbe9b6880d98e63e187e7e18f21a9f597327a2ecddd72ff234e95665c69
   requires_dist:
   - pillow>=12.2.0,<12.3.0
   - h5py>=3.15.0,<3.16.0
@@ -2405,10 +2405,10 @@ packages:
   - psutil>=7.2.2,<7.3.0
   - pydantic>=2.12.0,<2.13.0
   requires_python: '>=3.12,<3.15'
-- pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/geoh5py/0.13.0b2/geoh5py-0.13.0b2-py3-none-any.whl
+- pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/geoh5py/0.13.0/geoh5py-0.13.0-py3-none-any.whl
   name: geoh5py
-  version: 0.13.0b2
-  sha256: 89359d8d71027ea4a55b978ed8c2d6145fe67c4092afa2bbe7d90e6a0ceb19b7
+  version: 0.13.0
+  sha256: e9556cbe9b6880d98e63e187e7e18f21a9f597327a2ecddd72ff234e95665c69
   requires_dist:
   - pillow>=12.2.0,<12.3.0
   - h5py>=3.15.0,<3.16.0
@@ -2416,9 +2416,9 @@ packages:
   - psutil>=7.2.2,<7.3.0
   - pydantic>=2.12.0,<2.13.0
   requires_python: '>=3.12,<3.15'
-- conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0b2-pyh4616a5c_0.conda
-  sha256: 05a5fb26f55a1cb0691c1d7d2affd8f33fb8ed5b49222752344343d8687e4056
-  md5: 940a29bc18459c448fd073b02944e650
+- conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/geoh5py-0.13.0-pyh4616a5c_0.conda
+  sha256: a573a49ffd579cbaad3e8e47fd3bf916300ad58eb46e033133a019b2da8db962
+  md5: 026b03f52170a709da77f6d1f83569da
   depends:
   - python >=3.12
   - h5py 3.15.*
@@ -2428,8 +2428,8 @@ packages:
   - psutil >=7.2.2,7.2.*
   - python
   license: LGPL-3.0-only
-  size: 6528057
-  timestamp: 1780497477730
+  size: 6528096
+  timestamp: 1782857704038
 - pypi: https://files.pythonhosted.org/packages/3a/30/d1c94066343a98bb2cea40120873193a4fed68c4ad7f8935c11caf74c681/h5py-3.15.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
   name: h5py
   version: 3.15.1
@@ -2652,7 +2652,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/ipython?source=compressed-mapping
+  - pkg:pypi/ipython?source=hash-mapping
   size: 652076
   timestamp: 1780654438137
 - conda: https://repo.prefix.dev/conda-forge/noarch/ipython_pygments_lexers-1.1.1-pyhd8ed1ab_0.conda
@@ -2729,10 +2729,9 @@ packages:
   purls: []
   size: 751055
   timestamp: 1769769688841
-- pypi: https://files.pythonhosted.org/packages/a8/99/0df40354f6f9aa4c253a9e1a5914145766418f770f83b334def407d34eb1/las_geoh5-0.3.3b1-py3-none-any.whl
+- pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
   name: las-geoh5
-  version: 0.3.3b1
-  sha256: 84b5344f3bd862a300cf6031c4f55a138cd8799a5edfea6e41dcc985890d5eae
+  version: 0.3.3
   requires_dist:
   - geoh5py>=0.13.0b1,<0.14.dev0
   - lasio==0.32.*
@@ -2740,10 +2739,10 @@ packages:
   - pydantic>=2.12.0,<2.13.0
   - tqdm>=4.66.1,<5.0.0
   requires_python: '>=3.12,<3.15'
-- pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/las-geoh5/0.3.3b1/las_geoh5-0.3.3b1-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/45/66/a084a219ed9878f993b7d3d72fe8d93a42e26aac4d95e2ce8d823458095d/las_geoh5-0.3.3-py3-none-any.whl
   name: las-geoh5
-  version: 0.3.3b1
-  sha256: 84b5344f3bd862a300cf6031c4f55a138cd8799a5edfea6e41dcc985890d5eae
+  version: 0.3.3
+  sha256: dbc85d71f0011357f329dd55b5fc88c4f910144eefa66a0456978c70000bb01a
   requires_dist:
   - geoh5py>=0.13.0b1,<0.14.dev0
   - lasio==0.32.*
@@ -2751,9 +2750,10 @@ packages:
   - pydantic>=2.12.0,<2.13.0
   - tqdm>=4.66.1,<5.0.0
   requires_python: '>=3.12,<3.15'
-- pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#05b75f4c1685d69b254828e6390c7a85d9631412
+- pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/las-geoh5/0.3.3/las_geoh5-0.3.3-py3-none-any.whl
   name: las-geoh5
-  version: 0.3.3b2.dev5+05b75f4
+  version: 0.3.3
+  sha256: dbc85d71f0011357f329dd55b5fc88c4f910144eefa66a0456978c70000bb01a
   requires_dist:
   - geoh5py>=0.13.0b1,<0.14.dev0
   - lasio==0.32.*
@@ -2761,9 +2761,9 @@ packages:
   - pydantic>=2.12.0,<2.13.0
   - tqdm>=4.66.1,<5.0.0
   requires_python: '>=3.12,<3.15'
-- conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3b1-pyh4616a5c_1.conda
-  sha256: 65f9eaaa8aa07cfe2ba0704a188a49f32514944807cd1b827006d725ad4effe1
-  md5: 4260f0fb9698becadc6237fb5a68c965
+- conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/las-geoh5-0.3.3-pyh4616a5c_1.conda
+  sha256: edda114529189ff03f159b28e6ca7bd0977381d9da0be89b5a9103a0d9e3bcd7
+  md5: 85ad5c427cc120eec024082f161207e5
   depends:
   - python >=3.12
   - geoh5py >=0.13.0b1,0.13.*
@@ -2773,8 +2773,8 @@ packages:
   - tqdm >=4.66.1,4.*
   - python
   license: MIT
-  size: 2270786
-  timestamp: 1780113170201
+  size: 2270824
+  timestamp: 1782871716862
 - pypi: https://files.pythonhosted.org/packages/da/53/7dbbcacaee53dbb6b7dabd83c5e7de0bc613db343175e694da61404a1264/lasio-0.32-py3-none-any.whl
   name: lasio
   version: '0.32'
@@ -3514,16 +3514,17 @@ packages:
   purls: []
   size: 993166
   timestamp: 1762022118895
-- conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.2-h5347b49_0.conda
-  sha256: 9b1bdce27a7e31f7d241aeecff67a1f3101d52a2b1e33ccc2cdf2613072bf81f
-  md5: 01bb81d12c957de066ea7362007df642
+- conda: https://repo.prefix.dev/conda-forge/linux-64/libuuid-2.42.1-h5347b49_0.conda
+  sha256: 3f0edf1280e2f6684a986f821eaa3e123d2694a00b31b96ca0d4a4c12c129231
+  md5: 7d0a66598195ef00b6efc55aefc7453b
   depends:
-  - libgcc >=14
   - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
   license: BSD-3-Clause
+  license_family: BSD
   purls: []
-  size: 40017
-  timestamp: 1781625522462
+  size: 40163
+  timestamp: 1779118517630
 - conda: https://repo.prefix.dev/conda-forge/linux-64/libwebp-base-1.6.0-hd42ef1d_0.conda
   sha256: 3aed21ab28eddffdaf7f804f49be7a7d701e8f0e46c856d801270b470820a37b
   md5: aea31d2e5b1091feca96fcfe945c3cf9
@@ -3701,19 +3702,6 @@ packages:
   - pkg:pypi/mccabe?source=hash-mapping
   size: 12934
   timestamp: 1733216573915
-- pypi: https://files.pythonhosted.org/packages/d6/bf/84289c2299d35fc8d1151a43ffe65baad91737f8c383bb1e0dbcf3a3992b/mira_omf-3.4.0b1-py3-none-any.whl
-  name: mira-omf
-  version: 3.4.0b1
-  sha256: 417ce11a3327572f2227f321b3a013c3d70fc23c79969404a45543c29bf7196c
-  requires_dist:
-  - geoh5py>=0.13.0b1,<0.14.dev0
-  - numpy>=2.4.0,<2.5.0
-  - properties==0.6.*
-  - pypng>=0.20220715,<0.20220716
-  - six>=1.16,<2.0
-  - standard-imghdr==3.13.*
-  - vectormath==0.2.*
-  requires_python: '>=3.12,<3.15'
 - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
   name: mira-omf
   version: 3.4.0b2
@@ -3726,10 +3714,10 @@ packages:
   - standard-imghdr==3.13.*
   - vectormath==0.2.*
   requires_python: '>=3.12,<3.15'
-- pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/mira-omf/3.4.0b2/mira_omf-3.4.0b2-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/cb/43/0f37bfc8cf384b69709508d78a5419f7955f14e1a779d34f1477686c92dc/mira_omf-3.4.0-py3-none-any.whl
   name: mira-omf
-  version: 3.4.0b2
-  sha256: 376df6a986ba60aa9e7432cc0bdfe8ca4fd364d77de3c167bb02bcde21335d62
+  version: 3.4.0
+  sha256: b6e43b053b9916cdfb550403380d86303ec02229f0132811db73b7577b81812a
   requires_dist:
   - geoh5py>=0.13.0b2,<0.14.dev0
   - numpy>=2.4.0,<2.5.0
@@ -3739,9 +3727,22 @@ packages:
   - standard-imghdr==3.13.*
   - vectormath==0.2.*
   requires_python: '>=3.12,<3.15'
-- conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0b2-pyh4616a5c_1.conda
-  sha256: a7fb9632ca04e8bdae8e20713900a7f7b85cb0d39e60bcdb8c3480336dcfda7f
-  md5: 9e83eb96ebae4451fd5fd04138b5799e
+- pypi: https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/mira-omf/3.4.0/mira_omf-3.4.0-py3-none-any.whl
+  name: mira-omf
+  version: 3.4.0
+  sha256: b6e43b053b9916cdfb550403380d86303ec02229f0132811db73b7577b81812a
+  requires_dist:
+  - geoh5py>=0.13.0b2,<0.14.dev0
+  - numpy>=2.4.0,<2.5.0
+  - properties==0.6.*
+  - pypng>=0.20220715,<0.20220716
+  - six>=1.16,<2.0
+  - standard-imghdr==3.13.*
+  - vectormath==0.2.*
+  requires_python: '>=3.12,<3.15'
+- conda: https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev/noarch/mira-omf-3.4.0-pyh4616a5c_1.conda
+  sha256: 2d41c1b11d08b3d36f7b37a6aad50c36560cb54345e904dd9ea6d2149a5ca541
+  md5: 1c22c8d188c1a57e65f32673372169c3
   depends:
   - python >=3.12
   - geoh5py >=0.13.0b2,0.13.*
@@ -3753,8 +3754,8 @@ packages:
   - standard-imghdr 3.13.*
   - python
   license: MIT
-  size: 1493282
-  timestamp: 1780541521659
+  size: 1493260
+  timestamp: 1782872231820
 - conda: https://repo.prefix.dev/conda-forge/win-64/mkl-2026.0.0-hac47afa_908.conda
   sha256: f997bfc9bc4d4e14261cdcd1ad195d64a72ee44dca3145d24c1349f8d1311aa5
   md5: 36ea6e1292e9d5e89374201da79646ef
@@ -4129,7 +4130,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/pandas?source=compressed-mapping
+  - pkg:pypi/pandas?source=hash-mapping
   size: 14872605
   timestamp: 1778602625175
 - conda: https://repo.prefix.dev/conda-forge/linux-64/pandas-3.0.3-py313hbfd7664_0.conda
@@ -5132,7 +5133,7 @@ packages:
   license: GPL-2.0-or-later
   license_family: GPL
   purls:
-  - pkg:pypi/pylint?source=compressed-mapping
+  - pkg:pypi/pylint?source=hash-mapping
   size: 392703
   timestamp: 1781449583490
 - pypi: https://files.pythonhosted.org/packages/3e/b9/3766cc361d93edb2ce81e2e1f87dd98f314d7d513877a342d31b30741680/pypng-0.20220715.0-py3-none-any.whl
@@ -5150,10 +5151,11 @@ packages:
   - pkg:pypi/pypng?source=hash-mapping
   size: 52666
   timestamp: 1734831812097
-- conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.1.0-pyhc364b38_0.conda
-  sha256: 5aa4f03f578998719d3f12e1e79d53956f6cc915429f8ac66fc1bd2107b7ec65
-  md5: 4ea6d6c745192579ca81b75021b68334
+- conda: https://repo.prefix.dev/conda-forge/noarch/pytest-9.0.3-pyhc364b38_1.conda
+  sha256: 960f59442173eee0731906a9077bd5ccf60f4b4226f05a22d1728ab9a21a879c
+  md5: 6a991452eadf2771952f39d43615bb3e
   depends:
+  - colorama >=0.4
   - pygments >=2.7.2
   - python >=3.10
   - iniconfig >=1.0.1
@@ -5165,10 +5167,11 @@ packages:
   constrains:
   - pytest-faulthandler >=2
   license: MIT
+  license_family: MIT
   purls:
-  - pkg:pypi/pytest?source=compressed-mapping
-  size: 306602
-  timestamp: 1781624895494
+  - pkg:pypi/pytest?source=hash-mapping
+  size: 299984
+  timestamp: 1775644472530
 - conda: https://repo.prefix.dev/conda-forge/noarch/pytest-cov-7.1.0-pyhcf101f3_0.conda
   sha256: 44e42919397bd00bfaa47358a6ca93d4c21493a8c18600176212ec21a8d25ca5
   md5: 67d1790eefa81ed305b89d8e314c7923
@@ -5640,7 +5643,7 @@ packages:
   - ipywidgets >=6.0
   license: MPL-2.0 and MIT
   purls:
-  - pkg:pypi/tqdm?source=compressed-mapping
+  - pkg:pypi/tqdm?source=hash-mapping
   size: 94725
   timestamp: 1781094943144
 - conda: https://repo.prefix.dev/conda-forge/noarch/tqdm-4.68.2-pyha7b4d00_1.conda
@@ -5656,7 +5659,7 @@ packages:
   - ipywidgets >=6.0
   license: MPL-2.0 and MIT
   purls:
-  - pkg:pypi/tqdm?source=compressed-mapping
+  - pkg:pypi/tqdm?source=hash-mapping
   size: 94422
   timestamp: 1781095005329
 - conda: https://repo.prefix.dev/conda-forge/noarch/traitlets-5.15.1-pyhcf101f3_0.conda

@@ -1,8 +1,19 @@
 [workspace]
-requires-pixi = ">=0.54"
+requires-pixi = ">=0.67"
 channels = ["https://repo.prefix.dev/conda-forge"]
 platforms = ["win-64", "linux-64"]
 preview = ["pixi-build"]
+exclude-newer = "2026-06-15"
+
+[exclude-newer]
+geoh5py = "0d"
+las-geoh5 = "0d"
+mira-omf = "0d"
+
+[pypi-exclude-newer]
+geoh5py = "0d"
+las-geoh5 = "0d"
+mira-omf = "0d"
 
 [package.build.backend]
 name = "pixi-build-rattler-build"
