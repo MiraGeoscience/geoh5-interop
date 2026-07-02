@@ -1,0 +1,137 @@
+[workspace]
+requires-pixi = ">=0.67"
+channels = ["https://repo.prefix.dev/conda-forge"]
+platforms = ["win-64", "linux-64"]
+preview = ["pixi-build"]
+exclude-newer = "2026-06-15"
+
+[exclude-newer]
+geoh5py = "0d"
+las-geoh5 = "0d"
+mira-omf = "0d"
+
+[pypi-exclude-newer]
+geoh5py = "0d"
+las-geoh5 = "0d"
+mira-omf = "0d"
+
+[package.build.backend]
+name = "pixi-build-rattler-build"
+version = "*"
+channels = ["https://repo.prefix.dev/conda-forge"]
+
+[package.build.config]
+experimental = true
+
+[activation]
+# do not use dynamic versioning with this source editable package,
+# or version changes with each commit and pixi.lock is detected as out-of-date
+env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
+
+[dependencies]
+# no default Conda dependencies. See feature "self-built"
+
+[pypi-dependencies]
+# no default PyPI dependencies. See feature "self"
+
+[environments]
+# use "self" to ensure dependency versions from this local package are properly unified with Conda (as per conda-rt through the solve-group)
+default = { features = ["py-default", "self", "dev", "mira-git", "test", "lint"], solve-group = "default" }
+# testing environments with lint and pytest but no additional dev dependencies
+git-mira = { features = ["py-default", "self", "mira-git", "test", "lint"], solve-group = "default" }
+git-mira-py313 = { features = ["py313", "self", "mira-git", "test", "lint"], solve-group = "py313" }
+git-mira-py314 = { features = ["py314", "self", "mira-git", "test", "lint"], solve-group = "py314" }
+
+# ensures Conda packages are resolved the same way for test and runtime environments:
+# 1. share solve group with envs using "mira-git"
+# 2. do not use conda-pypi mapping for mira-channels, to keep git (PyPI) and Conda independent in same solve group
+# 3. do not use "self", not to bring in the git packages
+conda-mira = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "default"}
+conda-mira-py313 = { features = ["py313", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py313"}
+conda-mira-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py314"}
+# the environment for distribution, with no dev, lint or test dependencies
+conda-mira-rt = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt"], solve-group = "default"}
+
+pypi-mira-rt = ["py-default", "self", "mira-pypi-index", "conda-rt"]
+
+# uncomment below once Mira dependencies versions are published on PyPI
+pypi-rt = ["py-default", "self", "conda-rt"]
+
+# uncomment below once Mira dependencies versions are published on conda-forge
+# conda-rt = ["py-default", "self", "mira-conda", "conda-rt"]
+
+pylint-only = {features = ["py-default", "test", "lint"], no-default-feature = true}
+
+[feature.py-default.dependencies]
+python = "3.12.*"
+
+[feature.py313.dependencies]
+python = "3.13.*"
+
+[feature.py314.dependencies]
+python = "3.14.*"
+
+[feature.self.pypi-dependencies]
+geoh5-interop = {path = ".", editable = true}
+
+# [feature.self-built.dependencies]
+# geoh5-interop = {path = "."}
+
+[feature.mira-pypi-index.pypi-options]
+# private PyPI index still needed to resolve non-published versions and unify with Conda packages
+extra-index-urls = [
+    "https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/simple"
+]
+
+[feature.mira-channels]
+# Authenticate beforehand to access private channels:
+#    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
+channels = [
+    "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
+]
+
+[feature.mira-conda.dependencies]
+geoh5py = ">=0.13.0b1, 0.13.*"
+las-geoh5 = ">=0.3.3b1, 0.3.*"
+mira-omf = ">=3.4.0b1, 3.4.*"
+
+[feature.mira-git.pypi-dependencies]
+geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/GA_4.8" }
+las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/GA_4.8" }
+mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/GA_4.8" }
+
+[feature.conda-rt.dependencies]
+# runtime dependencies, except Mira packages
+# (None)
+
+[feature.dev.dependencies]
+docutils = "*"
+ipython = "*"
+pixi-pycharm = ">=0.0.10,<0.0.11"
+pygments = "*"
+
+[feature.dev.tasks]
+repl = {description = "Launch interactive Python shell (IPython)", cmd = "ipython"}
+
+[feature.test.dependencies]
+packaging = "*"
+pytest = "*"
+pytest-cov = "*"
+pyyaml = "*"
+
+[feature.lint.dependencies]
+pylint = "4.*"
+
+[feature.lint.tasks]
+lint = {cmd = "pylint", description = "Run pylint"}
+
+[feature.test.tasks]
+test = {cmd = "pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
+
+[tasks.test-pyvers]
+description = "Run tests across all Python versions"
+depends-on = [
+    {task = "test", environment = "git-mira"},
+    {task = "test", environment = "git-mira-py313"},
+    {task = "test", environment = "git-mira-py314"},
+]

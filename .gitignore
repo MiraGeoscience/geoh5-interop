@@ -145,3 +145,13 @@ dmypy.json
 #version ignore
 geoh5_interop/_version.py
 /_version.json
+
+# not using poetry to lock, but pixi
+poetry.lock
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# generated conda env files by pixi
+*.pixi.conda.yml
