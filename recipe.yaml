@@ -31,7 +31,7 @@ requirements:
     - poetry-dynamic-versioning >=1.9, 1.*
   run:
     - python >=${{ python_min }}
-    - geoh5py >=0.13.0b1, 0.13.*
+    - geoh5py >=0.13.1rc2, 0.13.*
     - las-geoh5 >=0.3.3b1, 0.3.*
     - mira-omf >=3.4.0b1, 3.4.*
 
