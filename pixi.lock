@@ -939,8 +939,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
       win-64:
       - conda: https://repo.prefix.dev/conda-forge/win-64/_openmp_mutex-4.5-20_gnu.conda
@@ -1057,8 +1057,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
   git-mira:
     channels:
@@ -1171,8 +1171,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
       win-64:
       - conda: https://repo.prefix.dev/conda-forge/win-64/_openmp_mutex-4.5-20_gnu.conda
@@ -1274,8 +1274,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
   git-mira-py313:
     channels:
@@ -1387,8 +1387,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
       win-64:
       - conda: https://repo.prefix.dev/conda-forge/win-64/_openmp_mutex-4.5-20_gnu.conda
@@ -1491,8 +1491,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
   git-mira-py314:
     channels:
@@ -1604,8 +1604,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zlib-ng-2.3.3-hceb46e0_1.conda
       - conda: https://repo.prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
       win-64:
       - conda: https://repo.prefix.dev/conda-forge/win-64/_openmp_mutex-4.5-20_gnu.conda
@@ -1708,8 +1708,8 @@ environments:
       - conda: https://repo.prefix.dev/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://repo.prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
-      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
+      - pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+      - pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
       - pypi: ./
   pylint-only:
     channels:
@@ -2378,11 +2378,11 @@ packages:
 - pypi: ./
   name: geoh5-interop
   version: 0.0.0.dev0+local
-  sha256: d59b89e3e7601c365712b31978958a793da1d3cb348368b1dbe0682955b24770
+  sha256: 3e3093261d5c9007a3277a6951c9ac1607708c8f0c9860a81cee8ed863d4c82b
   requires_dist:
   - geoh5py>=0.13.1rc2,<0.14.dev0
-  - las-geoh5>=0.3.3b1,<0.4.dev0
-  - mira-omf>=3.4.0b1,<3.5.dev0
+  - las-geoh5>=0.3.3,<0.4.dev0
+  - mira-omf>=3.4.0,<3.5.dev0
   requires_python: '>=3.12,<3.15'
 - pypi: git+https://github.com/MiraGeoscience/geoh5py.git?rev=release%2FGA_4.8.1#7db86a8b723236a16afaf1a326f50b33d07da3fc
   name: geoh5py
@@ -2729,16 +2729,6 @@ packages:
   purls: []
   size: 751055
   timestamp: 1769769688841
-- pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=release%2FGA_4.8#c494196b7132adbb261526961f99a6a9694277e8
-  name: las-geoh5
-  version: 0.3.3
-  requires_dist:
-  - geoh5py>=0.13.0b1,<0.14.dev0
-  - lasio==0.32.*
-  - numpy>=2.4.0,<2.5.0
-  - pydantic>=2.12.0,<2.13.0
-  - tqdm>=4.66.1,<5.0.0
-  requires_python: '>=3.12,<3.15'
 - pypi: https://files.pythonhosted.org/packages/45/66/a084a219ed9878f993b7d3d72fe8d93a42e26aac4d95e2ce8d823458095d/las_geoh5-0.3.3-py3-none-any.whl
   name: las-geoh5
   version: 0.3.3
@@ -2754,6 +2744,16 @@ packages:
   name: las-geoh5
   version: 0.3.3
   sha256: dbc85d71f0011357f329dd55b5fc88c4f910144eefa66a0456978c70000bb01a
+  requires_dist:
+  - geoh5py>=0.13.0b1,<0.14.dev0
+  - lasio==0.32.*
+  - numpy>=2.4.0,<2.5.0
+  - pydantic>=2.12.0,<2.13.0
+  - tqdm>=4.66.1,<5.0.0
+  requires_python: '>=3.12,<3.15'
+- pypi: git+https://github.com/MiraGeoscience/las-geoh5.git?rev=main#2d75d5a0bce826281cf57cc22bdb25eb15a6193a
+  name: las-geoh5
+  version: 0.3.4.dev1+2d75d5a
   requires_dist:
   - geoh5py>=0.13.0b1,<0.14.dev0
   - lasio==0.32.*
@@ -3702,18 +3702,6 @@ packages:
   - pkg:pypi/mccabe?source=hash-mapping
   size: 12934
   timestamp: 1733216573915
-- pypi: git+https://github.com/MiraGeoscience/omf.git?rev=release%2FGA_4.8#ebd135f20eee892fd87429a9daa270e607b352a8
-  name: mira-omf
-  version: 3.4.0b2
-  requires_dist:
-  - geoh5py>=0.13.0b2,<0.14.dev0
-  - numpy>=2.4.0,<2.5.0
-  - properties==0.6.*
-  - pypng>=0.20220715,<0.20220716
-  - six>=1.16,<2.0
-  - standard-imghdr==3.13.*
-  - vectormath==0.2.*
-  requires_python: '>=3.12,<3.15'
 - pypi: https://files.pythonhosted.org/packages/cb/43/0f37bfc8cf384b69709508d78a5419f7955f14e1a779d34f1477686c92dc/mira_omf-3.4.0-py3-none-any.whl
   name: mira-omf
   version: 3.4.0
@@ -3731,6 +3719,18 @@ packages:
   name: mira-omf
   version: 3.4.0
   sha256: b6e43b053b9916cdfb550403380d86303ec02229f0132811db73b7577b81812a
+  requires_dist:
+  - geoh5py>=0.13.0b2,<0.14.dev0
+  - numpy>=2.4.0,<2.5.0
+  - properties==0.6.*
+  - pypng>=0.20220715,<0.20220716
+  - six>=1.16,<2.0
+  - standard-imghdr==3.13.*
+  - vectormath==0.2.*
+  requires_python: '>=3.12,<3.15'
+- pypi: git+https://github.com/MiraGeoscience/omf.git?rev=main#a8d9eda321f85796dc3326c33c40273905d57ebf
+  name: mira-omf
+  version: 3.4.1.dev1+a8d9eda
   requires_dist:
   - geoh5py>=0.13.0b2,<0.14.dev0
   - numpy>=2.4.0,<2.5.0

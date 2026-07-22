@@ -92,13 +92,13 @@ channels = [
 
 [feature.mira-conda.dependencies]
 geoh5py = ">=0.13.1rc2, 0.13.*"
-las-geoh5 = ">=0.3.3b1, 0.3.*"
-mira-omf = ">=3.4.0b1, 3.4.*"
+las-geoh5 = ">=0.3.3, 0.3.*"
+mira-omf = ">=3.4.0, 3.4.*"
 
 [feature.mira-git.pypi-dependencies]
 geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/GA_4.8.1" }
-las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/GA_4.8" }
-mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/GA_4.8" }
+las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "main" }
+mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "main" }
 
 [feature.conda-rt.dependencies]
 # runtime dependencies, except Mira packages
