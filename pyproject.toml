@@ -27,9 +27,9 @@ dynamic = ["version", "classifiers"]
 # version = "0.0.0.dev0"
 
 dependencies = [
-    "geoh5py >=0.13.0b1, ==0.13.*",
-    "las-geoh5 >=0.3.3b1, ==0.3.*",
-    "mira-omf >=3.4.0b1, ==3.4.*",
+    "geoh5py >=0.13.1rc2, ==0.13.*",
+    "las-geoh5 >=0.3.3, ==0.3.*",
+    "mira-omf >=3.4.0, ==3.4.*",
 ]
 
 keywords = [
