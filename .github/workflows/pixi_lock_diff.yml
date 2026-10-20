@@ -1,0 +1,23 @@
+name: Pixi lock diff
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches:
+      - develop
+      - main
+      - release/**
+      - feature/**
+      - hotfix/**
+    paths:
+      - pixi.lock
+
+permissions: {}
+
+jobs:
+  call-workflow-pixi-lock-diff:
+    name: Pixi lock diff
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-pixi-lock_diff.yml@76fff83021bd2c94c34dda6667a7b06a28c8c48d # v3.13.5
+    permissions:
+      contents: read
+      pull-requests: write
