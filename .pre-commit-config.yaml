@@ -16,7 +16,7 @@ repos:
     -   id: poetry-check
         args: [--no-plugins]
 -   repo: https://github.com/hadialqattan/pycln
-    rev: v2.6.0
+    rev: v2.6.1
     hooks:
     -   id: pycln
         args: [--config=pyproject.toml]
@@ -30,7 +30,7 @@ repos:
         # -   --unsafe-fixes
     -   id: ruff-format
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.4.0
+    rev: v2.4.1
     hooks:
     -   id: mypy
         additional_dependencies: [
