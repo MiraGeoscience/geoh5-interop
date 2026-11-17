@@ -37,12 +37,12 @@ env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
 # no default PyPI dependencies. See feature "self"
 
 [environments]
-# use "self" to ensure dependency versions from this local package are properly unified with Conda (as per conda-rt through the solve-group)
-default = { features = ["py-default", "self", "dev", "mira-git", "test", "lint"], solve-group = "default" }
+# share dependency versions with Conda environments through the solve group
+default = { features = ["py-default", "dev", "mira-git", "test", "lint"], solve-group = "default" }
 # testing environments with lint and pytest but no additional dev dependencies
-git-mira = { features = ["py-default", "self", "mira-git", "test", "lint"], solve-group = "default" }
-git-mira-py313 = { features = ["py313", "self", "mira-git", "test", "lint"], solve-group = "py313" }
-git-mira-py314 = { features = ["py314", "self", "mira-git", "test", "lint"], solve-group = "py314" }
+git-mira = { features = ["py-default", "mira-git", "test", "lint"], solve-group = "default" }
+git-mira-py313 = { features = ["py313", "mira-git", "test", "lint"], solve-group = "py313" }
+git-mira-py314 = { features = ["py314", "mira-git", "test", "lint"], solve-group = "py314" }
 
 # ensures Conda packages are resolved the same way for test and runtime environments:
 # 1. share solve group with envs using "mira-git"
@@ -54,13 +54,13 @@ conda-mira-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-
 # the environment for distribution, with no dev, lint or test dependencies
 conda-mira-rt = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt"], solve-group = "default"}
 
-pypi-mira-rt = ["py-default", "self", "mira-pypi-index", "conda-rt"]
+pypi-mira-rt = ["py-default", "mira-pypi-index", "conda-rt"]
 
 # uncomment below once Mira dependencies versions are published on PyPI
-pypi-rt = ["py-default", "self", "conda-rt"]
+pypi-rt = ["py-default", "conda-rt"]
 
 # uncomment below once Mira dependencies versions are published on conda-forge
-# conda-rt = ["py-default", "self", "mira-conda", "conda-rt"]
+# conda-rt = ["py-default", "mira-conda", "conda-rt"]
 
 pylint-only = {features = ["py-default", "test", "lint"], no-default-feature = true}
 
@@ -72,12 +72,6 @@ python = "3.13.*"
 
 [feature.py314.dependencies]
 python = "3.14.*"
-
-[feature.self.pypi-dependencies]
-geoh5-interop = {path = ".", editable = true}
-
-# [feature.self-built.dependencies]
-# geoh5-interop = {path = "."}
 
 [feature.mira-pypi-index.pypi-options]
 # private PyPI index still needed to resolve non-published versions and unify with Conda packages
