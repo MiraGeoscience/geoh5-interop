@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-  "poetry-core>=1.8.0",
+  "poetry-core>=2.2.1",
   "poetry-dynamic-versioning>=1.9.1,<2.0",
   # list dependencies to work with PIP_NO_DEPS=1
   "MarkupSafe>=2.0",
@@ -29,8 +29,10 @@ dynamic = ["version", "classifiers"]
 dependencies = [
     # Former source: geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/ga-4.9" }
     "geoh5py >=0.14.0b1, <0.15.dev0",
-    "las-geoh5 >=0.3.3, <0.5.dev0",
-    "mira-omf >=3.4.0, <3.6.dev0",
+    # Former source: las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "GA-9681" }
+    "las-geoh5 >=0.3.4.dev57, <0.5.dev0",
+    # Former source: mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "GA-9681" }
+    "mira-omf >=3.4.1.dev34, <3.6.dev0",
 ]
 
 keywords = [
@@ -58,7 +60,7 @@ homepage = "https://www.mirageoscience.com/mining-industry-software/python-integ
 repository = "https://github.com/MiraGeoscience/geoh5py-interop"
 
 [tool.poetry]
-requires-poetry = '>=2.0,<3.0'
+requires-poetry = '>=2.3.0,<3.0'
 
 classifiers = [
     "Development Status :: 4 - Beta",
