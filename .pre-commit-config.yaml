@@ -30,7 +30,7 @@ repos:
         # -   --unsafe-fixes
     -   id: ruff-format
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.4.1
+    rev: v1.15.0
     hooks:
     -   id: mypy
         additional_dependencies: [
