@@ -53,8 +53,10 @@ conda-mira-py313 = { features = ["py313", "mira-conda", "mira-channels", "conda-
 conda-mira-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py314"}
 # the environment for distribution, with no dev, lint or test dependencies
 conda-mira-rt = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt"], solve-group = "default"}
+conda-mira-rt-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt"], solve-group = "py314"}
 
 pypi-mira-rt = ["py-default", "mira-pypi-index", "conda-rt"]
+pypi-mira-rt-py314 = ["py314", "mira-pypi-index", "conda-rt"]
 
 # uncomment below once Mira dependencies versions are published on PyPI
 pypi-rt = ["py-default", "conda-rt"]
