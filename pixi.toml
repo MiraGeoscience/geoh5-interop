@@ -87,7 +87,7 @@ channels = [
 ]
 
 [feature.mira-conda.dependencies]
-geoh5py = ">=0.13.1, <0.15.dev0"
+geoh5py = ">=0.14.0b1, <0.15.dev0"
 las-geoh5 = ">=0.3.3, <0.5.dev0"
 mira-omf = ">=3.4.0, <3.6.dev0"
 
