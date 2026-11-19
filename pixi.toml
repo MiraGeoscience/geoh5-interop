@@ -25,10 +25,8 @@ channels = ["https://repo.prefix.dev/conda-forge"]
 [package.build.config]
 experimental = true
 
-[activation]
-# do not use dynamic versioning with this source editable package,
-# or version changes with each commit and pixi.lock is detected as out-of-date
-env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
+[activation.env]
+PYTHONNOUSERSITE = "1"
 
 [dependencies]
 # no default Conda dependencies
