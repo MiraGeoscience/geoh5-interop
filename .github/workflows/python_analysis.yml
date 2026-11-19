@@ -57,6 +57,7 @@ jobs:
     with:
       package-manager: 'pixi'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
+      pixi-task: 'test'
       pixi-environments: '["git-mira", "git-mira-py313", "git-mira-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
@@ -70,6 +71,7 @@ jobs:
     with:
       package-manager: 'pixi'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
+      pixi-task: 'test'
       pixi-environments: '["conda-mira", "conda-mira-py313", "conda-mira-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
