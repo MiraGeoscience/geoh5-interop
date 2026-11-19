@@ -25,10 +25,8 @@ channels = ["https://repo.prefix.dev/conda-forge"]
 [package.build.config]
 experimental = true
 
-[activation]
-# do not use dynamic versioning with this source editable package,
-# or version changes with each commit and pixi.lock is detected as out-of-date
-env = { POETRY_DYNAMIC_VERSIONING_OVERRIDE = "geoh5-interop=0.0.0.dev0+local" }
+[activation.env]
+PYTHONNOUSERSITE = "1"
 
 [dependencies]
 # no default Conda dependencies
@@ -82,8 +80,7 @@ extra-index-urls = [
 ]
 
 [feature.mira-channels]
-# Authenticate beforehand to access private channels:
-#    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
+# Authenticate for this private Conda channel first; see README.rst.
 channels = [
     "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
 ]
@@ -124,7 +121,10 @@ pylint = "4.*"
 lint = {cmd = "pylint", description = "Run pylint"}
 
 [feature.test.tasks]
-test = {cmd = "pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
+test = {depends-on = ["install"], cmd = "pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
+
+[tasks]
+install = {cmd = "uv pip install --python \"$CONDA_PREFIX\" --no-deps --editable . && python scripts/check_dependencies.py", description = "Install the local package and check dependency compatibility"}
 
 [tasks.test-pyvers]
 description = "Run tests across all Python versions"
