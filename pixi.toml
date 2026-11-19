@@ -80,8 +80,7 @@ extra-index-urls = [
 ]
 
 [feature.mira-channels]
-# Authenticate beforehand to access private channels:
-#    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
+# Authenticate for this private Conda channel first; see README.rst.
 channels = [
     "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
 ]
