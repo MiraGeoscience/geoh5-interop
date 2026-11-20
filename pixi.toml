@@ -46,10 +46,10 @@ pypi-mira-rt-py314 = { features = ["py314", "mira-pypi", "mira-pypi-index", "con
 conda-mira-rt = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt"], solve-group = "default"}
 conda-mira-rt-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt"], solve-group = "py314"}
 
-# uncomment below once Mira dependencies versions are published on PyPI
-pypi-rt = ["py-default", "mira-pypi", "conda-rt"]
+# can only use this environment once Mira dependencies are published on PyPI
+# pypi-rt = ["py-default", "mira-pypi", "conda-rt"]
 
-# uncomment below once Mira dependencies versions are published on conda-forge
+# can only use this environment once Mira dependencies are published on conda-forge
 # conda-rt = ["py-default", "mira-conda", "conda-rt"]
 
 pylint-only = {features = ["py-default", "test", "lint"], no-default-feature = true}
