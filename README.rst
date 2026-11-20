@@ -29,7 +29,7 @@ See the individual package documentation for more information.
 
 Development requires Pixi 0.84.2 or newer and external
 `uv <https://docs.astral.sh/uv/>`_, with both commands available on ``PATH``.
-The Pixi test task installs this meta-package in editable mode and checks its
+The Pixi install task installs this meta-package in editable mode and checks its
 dependencies. It reports but permits the known incorrect Python 2 wheel tags in
 the Conda ``properties 0.6.1 py_0`` and ``vectormath 0.2.2 py_0`` builds.
 
