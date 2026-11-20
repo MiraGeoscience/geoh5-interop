@@ -28,11 +28,8 @@ dynamic = ["version", "classifiers"]
 
 dependencies = [
     # Mira packages
-    # "geoh5py @ git+https://github.com/MiraGeoscience/geoh5py.git@release/ga-4.9",
     "geoh5py >=0.14.0b1, <0.15.dev0",
-    # "las-geoh5 @ git+https://github.com/MiraGeoscience/las-geoh5.git@release/ga-4.9",
     "las-geoh5 >=0.3.4b1, <0.4.dev0",
-    # "mira-omf @ git+https://github.com/MiraGeoscience/omf.git@release/ga-4.9",
     "mira-omf >=3.5.0b1, <3.6.dev0",
 ]
 
