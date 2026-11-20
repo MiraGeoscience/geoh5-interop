@@ -5,17 +5,12 @@ preview = ["pixi-build"]
 channels = ["https://repo.prefix.dev/conda-forge"]
 platforms = ["win-64", "linux-64"]
 
-exclude-newer = "5d"
+[workspace.exclude-newer]
+cutoff = "5d"
+exemptions = { geoh5py = "*", las-geoh5 = "*", mira-omf = "*" }
 
-[exclude-newer]
-geoh5py = "0d"
-las-geoh5 = "0d"
-mira-omf = "0d"
-
-[pypi-exclude-newer]
-geoh5py = "0d"
-las-geoh5 = "0d"
-mira-omf = "0d"
+[workspace.pypi-exclude-newer]
+exemptions = { geoh5py = "*", las-geoh5 = "*", mira-omf = "*" }
 
 [package.build.backend]
 name = "pixi-build-rattler-build"
