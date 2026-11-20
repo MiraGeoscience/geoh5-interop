@@ -50,7 +50,7 @@ jobs:
   call-workflow-pytest-github:
     name: Pytest with Git repos
     needs: pixi-options
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@9d0728c5214f5e416e580139fe0e7f1cea1237aa # GA-9681-pixi-workflow
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@4a000ba323d8818b874c907dd7cfb3b29960cba4 # v4.1.0
     permissions:
       contents: read
       pull-requests: read
@@ -64,7 +64,7 @@ jobs:
   call-workflow-pytest-conda:
     name: Pytest with Mira Conda
     needs: pixi-options
-    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@9d0728c5214f5e416e580139fe0e7f1cea1237aa # GA-9681-pixi-workflow
+    uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@4a000ba323d8818b874c907dd7cfb3b29960cba4 # v4.1.0
     permissions:
       contents: read
       pull-requests: read
