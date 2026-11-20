@@ -46,9 +46,9 @@ jobs:
       package-manager: 'pixi'
       app-name: 'geoh5_interop'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
-      pixi-environment: 'git-mira'
-  call-workflow-pytest-github:
-    name: Pytest with Git repos
+      pixi-environment: 'pylint-only'
+  call-workflow-pytest-pypi:
+    name: Pytest with Mira PyPI
     needs: pixi-options
     uses: MiraGeoscience/CI-tools/.github/workflows/reusable-python-pytest.yml@4a000ba323d8818b874c907dd7cfb3b29960cba4 # v4.1.0
     permissions:
@@ -58,9 +58,12 @@ jobs:
       package-manager: 'pixi'
       pixi-version: ${{ needs.pixi-options.outputs.version }}
       pixi-task: 'test'
-      pixi-environments: '["git-mira", "git-mira-py313", "git-mira-py314"]'
+      pixi-environments: '["pypi-mira", "pypi-mira-py313", "pypi-mira-py314"]'
       os: '["ubuntu-latest", "windows-latest"]'
       cache-number: 1
+    secrets:
+      JFROG_ARTIFACTORY_URL: ${{ secrets.JFROG_ARTIFACTORY_URL }}
+      JFROG_ARTIFACTORY_TOKEN: ${{ secrets.JFROG_ARTIFACTORY_TOKEN }}
   call-workflow-pytest-conda:
     name: Pytest with Mira Conda
     needs: pixi-options

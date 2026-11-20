@@ -35,17 +35,12 @@ PYTHONNOUSERSITE = "1"
 # no default PyPI dependencies
 
 [environments]
-# share dependency versions with Conda environments through the solve group
-default = { features = ["py-default", "dev", "mira-git", "test", "lint"], solve-group = "default" }
-# testing environments with lint and pytest but no additional dev dependencies
-git-mira = { features = ["py-default", "mira-git", "test", "lint"], solve-group = "default" }
-git-mira-py313 = { features = ["py313", "mira-git", "test", "lint"], solve-group = "py313" }
-git-mira-py314 = { features = ["py314", "mira-git", "test", "lint"], solve-group = "py314" }
+default = { features = ["py-default", "dev", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "default" }
+# Test published PyPI and Conda packages in separate solve groups.
+pypi-mira = { features = ["py-default", "mira-pypi", "mira-pypi-index", "conda-rt", "test", "lint"], solve-group = "pypi-default" }
+pypi-mira-py313 = { features = ["py313", "mira-pypi", "mira-pypi-index", "conda-rt", "test", "lint"], solve-group = "pypi-py313" }
+pypi-mira-py314 = { features = ["py314", "mira-pypi", "mira-pypi-index", "conda-rt", "test", "lint"], solve-group = "pypi-py314" }
 
-# ensures Conda packages are resolved the same way for test and runtime environments:
-# 1. share solve group with envs using "mira-git"
-# 2. do not use conda-pypi mapping for mira-channels, to keep git (PyPI) and Conda independent in same solve group
-# 3. avoid the Git dependencies in the Conda environment
 conda-mira = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "default"}
 conda-mira-py313 = { features = ["py313", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py313"}
 conda-mira-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "py314"}
@@ -53,11 +48,11 @@ conda-mira-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-
 conda-mira-rt = { features = ["py-default", "mira-conda", "mira-channels", "conda-rt"], solve-group = "default"}
 conda-mira-rt-py314 = { features = ["py314", "mira-conda", "mira-channels", "conda-rt"], solve-group = "py314"}
 
-pypi-mira-rt = ["py-default", "mira-pypi-index", "conda-rt"]
-pypi-mira-rt-py314 = ["py314", "mira-pypi-index", "conda-rt"]
+pypi-mira-rt = { features = ["py-default", "mira-pypi", "mira-pypi-index", "conda-rt"], solve-group = "pypi-default" }
+pypi-mira-rt-py314 = { features = ["py314", "mira-pypi", "mira-pypi-index", "conda-rt"], solve-group = "pypi-py314" }
 
 # uncomment below once Mira dependencies versions are published on PyPI
-pypi-rt = ["py-default", "conda-rt"]
+pypi-rt = ["py-default", "mira-pypi", "conda-rt"]
 
 # uncomment below once Mira dependencies versions are published on conda-forge
 # conda-rt = ["py-default", "mira-conda", "conda-rt"]
@@ -90,10 +85,10 @@ geoh5py = ">=0.14.0b1, <0.15.dev0"
 las-geoh5 = ">=0.3.4b1, <0.4.dev0"
 mira-omf = ">=3.5.0b1, <3.6.dev0"
 
-[feature.mira-git.pypi-dependencies]
-geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/ga-4.9" }
-las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/ga-4.9" }
-mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/ga-4.9" }
+[feature.mira-pypi.pypi-dependencies]
+geoh5py = ">=0.14.0b1, <0.15.dev0"
+las-geoh5 = ">=0.3.4b1, <0.4.dev0"
+mira-omf = ">=3.5.0b1, <3.6.dev0"
 
 [feature.conda-rt.dependencies]
 # runtime dependencies, except Mira packages
@@ -129,7 +124,7 @@ install = {cmd = "uv pip install --python \"$CONDA_PREFIX\" --no-deps --editable
 [tasks.test-pyvers]
 description = "Run tests across all Python versions"
 depends-on = [
-    {task = "test", environment = "git-mira"},
-    {task = "test", environment = "git-mira-py313"},
-    {task = "test", environment = "git-mira-py314"},
+    {task = "test", environment = "pypi-mira"},
+    {task = "test", environment = "pypi-mira-py313"},
+    {task = "test", environment = "pypi-mira-py314"},
 ]
