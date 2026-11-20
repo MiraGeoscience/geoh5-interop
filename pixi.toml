@@ -121,7 +121,7 @@ pylint = "4.*"
 lint = {cmd = "pylint", description = "Run pylint"}
 
 [feature.test.tasks]
-test = {depends-on = ["install"], cmd = "pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
+test = {cmd = "python -m pytest --cov --cov-report=xml", description = "Run pytest with coverage reporting"}
 
 [tasks]
 install = {cmd = "uv pip install --python \"$CONDA_PREFIX\" --no-deps --editable . && python scripts/check_dependencies.py", description = "Install the local package and check dependency compatibility"}
