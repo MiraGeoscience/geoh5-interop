@@ -5,13 +5,14 @@ Install `Pixi <https://pixi.sh/>`_ 0.84.2 or newer and external
 `uv <https://docs.astral.sh/uv/>`_. Keep both commands on ``PATH``; uv is not
 installed by Pixi.
 
-The Conda test environments use Mira's private Conda channel. Authenticate with
-your own JFrog credentials before using them::
+The Conda test environments use Mira's private Conda channel, and the PyPI
+environments may use a private package index for unpublished dependencies.
+Authenticate with your own JFrog credentials before using either::
 
     pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
 
-Do not put credentials in the repository. The token may appear in shell history
-and process listings.
+Private PyPI indexes require separate authentication. Do not put credentials
+in the repository. The token may appear in shell history and process listings.
 
 Environments and tests
 ^^^^^^^^^^^^^^^^^^^^^^
