@@ -92,7 +92,7 @@ mira-omf = ">=3.5.0b1, ==3.5.*"
 [feature.dev.dependencies]
 docutils = "*"
 ipython = "*"
-pixi-pycharm = ">=0.0.10,<0.0.11"
+pixi-pycharm = "*"
 pygments = "*"
 
 [feature.dev.tasks]
