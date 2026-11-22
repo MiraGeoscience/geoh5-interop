@@ -8,6 +8,7 @@
 
 import tomllib
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 import yaml
 from packaging.utils import canonicalize_name
@@ -26,15 +27,18 @@ def test_locked_pypi_names_with_git_source():
     assert locked_pypi_names([{"pypi": url}], {url: "geoh5py"}) == {"geoh5py"}
 
 
-# pylint: disable=line-too-long
 def test_locked_pypi_sources():
-    """Test that the only packages resolved from PyPI are the ones specified in the mira-pypi feature."""
+    """Check that Mira packages use the source selected by each environment."""
 
     package_root = Path(__file__).resolve().parents[1]
     pixi = tomllib.loads((package_root / "pixi.toml").read_text())
     mira_sources = {
         canonicalize_name(name)
         for name in pixi["feature"]["mira-pypi"]["pypi-dependencies"]
+    }
+    mira_conda = {
+        canonicalize_name(name)
+        for name in pixi["feature"]["mira-conda"]["dependencies"]
     }
     lock = yaml.safe_load((package_root / "pixi.lock").read_text())
     packages = {
@@ -43,13 +47,29 @@ def test_locked_pypi_sources():
         if "pypi" in package
     }
     for environment, data in lock["environments"].items():
-        if environment == "docs":
-            continue
+        features = pixi["environments"][environment]["features"]
+        expected_pypi = mira_sources if "mira-pypi" in features else set()
+        expected_conda = mira_conda if "mira-conda" in features else set()
         for platform, entries in data["packages"].items():
             pypi_sources = locked_pypi_names(entries, packages)
-            assert pypi_sources == mira_sources, (
+            conda_sources = {
+                canonicalize_name(
+                    unquote(urlsplit(entry["conda"]).path.rsplit("/", 1)[-1]).rsplit(
+                        "-", 2
+                    )[0]
+                )
+                for entry in entries
+                if "conda" in entry
+            }
+            assert pypi_sources & mira_sources == expected_pypi, (
                 environment,
                 platform,
-                mira_sources - pypi_sources,
-                pypi_sources - mira_sources,
+                expected_pypi,
+                pypi_sources & mira_sources,
+            )
+            assert conda_sources & mira_conda == expected_conda, (
+                environment,
+                platform,
+                expected_conda,
+                conda_sources & mira_conda,
             )
