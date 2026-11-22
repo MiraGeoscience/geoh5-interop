@@ -33,13 +33,13 @@ The Pixi install task installs this meta-package in editable mode and checks its
 dependencies. It reports but permits the known incorrect Python 2 wheel tags in
 the Conda ``properties 0.6.1 py_0`` and ``vectormath 0.2.2 py_0`` builds.
 
-Before using the private JFrog Conda channel, authenticate with your Mira
-username and JFrog access token (replace the placeholders)::
+Before using Mira's private development indexes, authenticate with your Mira
+Artifactory credentials::
 
-    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
+    pixi auth login mirageoscienceltd.jfrog.io
 
-The token may be visible in shell history and process listings. Private PyPI
-indexes require separate authentication.
+See ``README-dev.rst`` for contributor access requirements. Never add
+credentials to the repository.
 
 Installation
 ------------
