@@ -8,7 +8,6 @@
 
 import tomllib
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
 
 import yaml
 from packaging.utils import canonicalize_name
@@ -22,62 +21,35 @@ def locked_pypi_names(entries, packages):
     }
 
 
-def locked_conda_names(entries):
-    return {
-        canonicalize_name(
-            unquote(urlsplit(entry["conda"]).path.rsplit("/", 1)[-1]).rsplit("-", 2)[0]
-        )
-        for entry in entries
-        if "conda" in entry
-    }
+def test_locked_pypi_names_with_git_source():
+    url = "git+https://github.com/MiraGeoscience/geoh5py.git@release/ga-4.9"
+    assert locked_pypi_names([{"pypi": url}], {url: "geoh5py"}) == {"geoh5py"}
 
 
-def test_locked_mira_sources():
+# pylint: disable=line-too-long
+def test_locked_pypi_sources():
+    """Test that the only packages resolved from PyPI are the ones specified in the mira-pypi feature."""
+
     package_root = Path(__file__).resolve().parents[1]
     pixi = tomllib.loads((package_root / "pixi.toml").read_text())
+    mira_sources = {
+        canonicalize_name(name)
+        for name in pixi["feature"]["mira-pypi"]["pypi-dependencies"]
+    }
     lock = yaml.safe_load((package_root / "pixi.lock").read_text())
     packages = {
         package["pypi"]: package["name"]
         for package in lock["packages"]
         if "pypi" in package
     }
-    mira_conda = {
-        canonicalize_name(name)
-        for name in pixi["feature"]["mira-conda"]["dependencies"]
-    }
-    mira_pypi = {
-        canonicalize_name(name)
-        for name in pixi["feature"]["mira-pypi"]["pypi-dependencies"]
-    }
-
     for environment, data in lock["environments"].items():
         if environment == "docs":
             continue
-        features = pixi["environments"][environment]["features"]
-        if not {"mira-conda", "mira-pypi"}.intersection(features):
-            continue
         for platform, entries in data["packages"].items():
-            conda_sources = locked_conda_names(entries)
             pypi_sources = locked_pypi_names(entries, packages)
-            if "mira-conda" in features:
-                assert mira_conda <= conda_sources, (
-                    environment,
-                    platform,
-                    mira_conda - conda_sources,
-                )
-                assert mira_conda.isdisjoint(pypi_sources), (
-                    environment,
-                    platform,
-                    mira_conda & pypi_sources,
-                )
-            if "mira-pypi" in features:
-                assert mira_pypi <= pypi_sources, (
-                    environment,
-                    platform,
-                    mira_pypi - pypi_sources,
-                )
-                assert mira_pypi.isdisjoint(conda_sources), (
-                    environment,
-                    platform,
-                    mira_pypi & conda_sources,
-                )
+            assert pypi_sources == mira_sources, (
+                environment,
+                platform,
+                mira_sources - pypi_sources,
+                pypi_sources - mira_sources,
+            )

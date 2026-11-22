@@ -11,26 +11,30 @@ Prerequisites
 * **Pixi and uv:** Install `Pixi <https://pixi.sh/>`_ 0.84.2 and external
   `uv <https://docs.astral.sh/uv/>`_. Keep both commands on ``PATH``; uv is not
   installed by Pixi.
+* **Git LFS:** This repository uses Git LFS. Follow GitHub's `installation
+  instructions
+  <https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage>`_.
 * **prek:** Install `prek <https://prek.j178.dev/>`_ for the configured Git
   hooks.
 * **IDE interpreter:** Configure your IDE to use the interpreter inside
   ``.pixi/envs/default`` and exclude ``.pixi`` from source indexing.
   For **PyCharm**, follow Pixi's `JetBrains integration guide
   <https://pixi.prefix.dev/latest/integration/editor/jetbrains/>`_.
-* **JFrog authentication:** authenticate with Mira Artifactory using your
-  own credentials::
-
-      pixi auth login mirageoscienceltd.jfrog.io
-
+* **JFrog authentication:** Pixi uses uv's PyPI authentication, which is
+  separate from ``pixi auth login``. Configure a protected ``.netrc`` file
+  (``%HOME%\_netrc`` on Windows) with your Artifactory machine, login, and
+  password or access token, as described in `Pixi's authentication guide
+  <https://pixi.prefix.dev/latest/deployment/authentication/#netrc-file>`_.
   Never add credentials to ``pixi.toml`` or ``pixi.lock``.
 
 .. note:: External contributors using Pixi
 
-   The ``mira-*`` environments require access to Mira's private Conda and
-   PyPI development repositories. Request access from the repository
-   maintainers to use these environments. GitHub does not provide JFrog
-   secrets to workflows triggered by fork pull requests, so those jobs cannot
-   authenticate. Never share a JFrog token in a pull request or issue.
+   If you do not have Mira Artifactory credentials, comment out ``index-url``
+   under ``[feature.mira-pypi.pypi-options]`` in ``pixi.toml``, then run
+   ``pixi lock``. Packages configured with version references will resolve from
+   public PyPI if the required versions are available there; packages configured
+   with Git references will resolve from Git.
+   Keep these local ``pixi.toml`` and ``pixi.lock`` changes uncommitted.
 
 Install and test
 ^^^^^^^^^^^^^^^^
@@ -50,12 +54,19 @@ tools.
 On Windows, install the locked runtime into Geoscience Analyst with::
 
     install_in_analyst.bat
-    install_in_analyst.bat -e --name geoh5-interop-dev
+    install_in_analyst.bat -e --name mirageo-dev
+
+Possibly, replace ``mirageo-dev`` with a dedicated environment name of your choice.
 
 The script exports the locked ``win-64`` runtime, installs its dependencies
 through Analyst, and installs this checkout without resolving dependencies
 again. Pass ``-e`` first for editable mode; optional ``--conda`` and ``--name``
 arguments are forwarded to Analyst. A valid ``pixi.lock`` is required.
+
+Building documentation
+^^^^^^^^^^^^^^^^^^^^^^
+
+This repository has no ``docs`` environment or ``build-docs`` task.
 
 Updating dependencies
 ^^^^^^^^^^^^^^^^^^^^^
@@ -68,14 +79,16 @@ After editing requirements, run ``pixi update`` to update dependencies, or
 ``pixi lock`` to resolve the manifest and refresh the lock file without
 installing the environments.
 
-Commit ``pixi.lock`` with the manifest changes. The ``mira-conda`` and
-``mira-pypi`` features use published Mira packages, including private
-pre-releases where configured. Do not switch them to Git sources or create a
-Git dependency environment. The lock file is checked by
-``tests/lock_test.py``, which verifies Mira package sources for these features;
-unrelated PyPI dependencies are permitted. Keep compatibility bounds on
-indirect Conda dependencies: Pixi solves Conda before PyPI and does not
-backtrack between them.
+Commit ``pixi.lock`` with the manifest changes. In ``pixi.toml``, the
+``mira-pypi`` feature lists Mira packages resolved from PyPI or GitHub:
+
+- On a development branch, comment out published versions and use git sources.
+- When preparing a release, use published versions and comment out git sources.
+
+The lock file is checked by ``tests/lock_test.py``: it ensures all dependencies
+are resolved from Conda, except for the Mira packages listed under the
+``mira-pypi`` feature. Keep compatibility bounds on indirect Conda dependencies:
+Pixi solves Conda before PyPI and does not backtrack between them.
 
 Git hooks
 ^^^^^^^^^
@@ -91,37 +104,6 @@ Test layout
 ^^^^^^^^^^^
 
 Tests live under ``tests`` and use the ``_test.py`` filename suffix.
-
-Repository-specific instructions: geoh5-interop
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The following instructions are specific to this meta-package.
-
-Use ``default`` (Python 3.12, published Mira Conda packages and development
-tools), ``conda-mira`` or ``pypi-mira`` for tests. The latter two have
-``-py313`` and ``-py314`` variants. Runtime-only environments are
-``conda-mira-rt`` and ``pypi-mira-rt``, with ``-py314`` variants. Run focused
-source and lock checks with::
-
-    pixi run --frozen -e pypi-mira python -m pytest -q tests/lock_test.py tests/check_dependencies_test.py
-    pixi lock --check
-
-``install`` installs this checkout editable without dependencies and checks
-compatibility. ``test-pyvers`` runs PyPI tests for Python 3.12, 3.13 and 3.14;
-``repl`` is available in ``default``. This repository does not define local
-sibling-dependency or documentation build tasks.
-
-Keep ``pyproject.toml``, ``pixi.toml`` and ``recipe.yaml`` requirements aligned
-and commit any updated lock.
-
-Use the Pixi login above for Mira Artifactory access to the private Conda
-channel and PyPI index. Never put credentials in the repository, index URLs,
-or command-line arguments.
-
-The Analyst script exists here and exports ``conda-mira-rt`` from the lock;
-use ``install_in_analyst.bat`` with optional ``-e`` first and ``--conda`` or
-``--name`` as needed; ``geoh5-interop-dev`` above is only an example name.
-This package does not select a PyTorch CPU or CUDA backend.
 
 ---------
 

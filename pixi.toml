@@ -82,8 +82,11 @@ mira-omf = ">=3.5.0b1, 3.5.*"
 
 [feature.mira-pypi.pypi-dependencies]
 geoh5py = ">=0.14.0b1, ==0.14.*"
+# geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/ga-4.9" }
 las-geoh5 = ">=0.3.4b1, ==0.3.*"
+# las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/ga-4.9" }
 mira-omf = ">=3.5.0b1, ==3.5.*"
+# mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/ga-4.9" }
 
 [feature.conda-rt.dependencies]
 # runtime dependencies, except Mira packages
