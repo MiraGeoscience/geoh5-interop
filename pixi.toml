@@ -6,11 +6,19 @@ channels = ["https://repo.prefix.dev/conda-forge"]
 platforms = ["win-64", "linux-64"]
 
 [workspace.exclude-newer]
-cutoff = "5d"
-exemptions = { geoh5py = "*", las-geoh5 = "*", mira-omf = "*" }
+cutoff = "8d"
 
-[workspace.pypi-exclude-newer]
-exemptions = { geoh5py = "*", las-geoh5 = "*", mira-omf = "*" }
+[workspace.exclude-newer.exemptions]
+# from Mira sources
+geoh5py = "*"
+las-geoh5 = "*"
+mira-omf = "*"
+
+[workspace.pypi-exclude-newer.exemptions]
+# from Mira sources
+geoh5py = "*"
+las-geoh5 = "*"
+mira-omf = "*"
 
 [package.build.backend]
 name = "pixi-build-rattler-build"
@@ -24,10 +32,10 @@ experimental = true
 PYTHONNOUSERSITE = "1"
 
 [dependencies]
-# no default Conda dependencies
+# no default Conda dependencies. See features "mira-conda" and "conda-rt"
 
 [pypi-dependencies]
-# no default PyPI dependencies
+# no default PyPI dependencies. See feature "mira-pypi"
 
 [environments]
 default = { features = ["py-default", "dev", "mira-conda", "mira-channels", "conda-rt", "test", "lint"], solve-group = "default" }
@@ -65,6 +73,7 @@ python = "3.14.*"
 
 [feature.mira-pypi-index.pypi-options]
 # private PyPI index still needed to resolve non-published versions and unify with Conda packages
+# Authenticate for this private PyPI index first; see README-dev.rst.
 extra-index-urls = [
     "https://mirageoscienceltd.jfrog.io/artifactory/api/pypi/public-pypi-dev-local/simple"
 ]
