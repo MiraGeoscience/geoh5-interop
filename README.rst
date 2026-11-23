@@ -27,19 +27,7 @@ This meta-package collects the following packages:
 
 See the individual package documentation for more information.
 
-Development requires Pixi 0.84.2 or newer and external
-`uv <https://docs.astral.sh/uv/>`_, with both commands available on ``PATH``.
-The Pixi install task installs this meta-package in editable mode and checks its
-dependencies. It reports but permits the known incorrect Python 2 wheel tags in
-the Conda ``properties 0.6.1 py_0`` and ``vectormath 0.2.2 py_0`` builds.
-
-Before using the private JFrog Conda channel, authenticate with your Mira
-username and JFrog access token (replace the placeholders)::
-
-    pixi auth login --username <user@mirageoscience.com> --password <user-token> mirageoscienceltd.jfrog.io
-
-The token may be visible in shell history and process listings. Private PyPI
-indexes require separate authentication.
+See ``README-dev.rst`` for instructions on how to set up a development environment.
 
 Installation
 ------------

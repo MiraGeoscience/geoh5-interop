@@ -70,20 +70,23 @@ extra-index-urls = [
 ]
 
 [feature.mira-channels]
-# Authenticate for this private Conda channel first; see README.rst.
+# Authenticate for this private Conda channel first; see README-dev.rst.
 channels = [
     "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
 ]
 
 [feature.mira-conda.dependencies]
-geoh5py = ">=0.14.0b1, <0.15.dev0"
-las-geoh5 = ">=0.3.4b1, <0.4.dev0"
-mira-omf = ">=3.5.0b1, <3.6.dev0"
+geoh5py = ">=0.14.0b1, 0.14.*"
+las-geoh5 = ">=0.3.4b1, 0.3.*"
+mira-omf = ">=3.5.0b1, 3.5.*"
 
 [feature.mira-pypi.pypi-dependencies]
-geoh5py = ">=0.14.0b1, <0.15.dev0"
-las-geoh5 = ">=0.3.4b1, <0.4.dev0"
-mira-omf = ">=3.5.0b1, <3.6.dev0"
+geoh5py = ">=0.14.0b1, ==0.14.*"
+# geoh5py = { git = "https://github.com/MiraGeoscience/geoh5py.git", rev = "release/ga-4.9" }
+las-geoh5 = ">=0.3.4b1, ==0.3.*"
+# las-geoh5 = { git = "https://github.com/MiraGeoscience/las-geoh5.git", rev = "release/ga-4.9" }
+mira-omf = ">=3.5.0b1, ==3.5.*"
+# mira-omf = { git = "https://github.com/MiraGeoscience/omf.git", rev = "release/ga-4.9" }
 
 [feature.conda-rt.dependencies]
 # runtime dependencies, except Mira packages
@@ -92,7 +95,7 @@ mira-omf = ">=3.5.0b1, <3.6.dev0"
 [feature.dev.dependencies]
 docutils = "*"
 ipython = "*"
-pixi-pycharm = ">=0.0.10,<0.0.11"
+pixi-pycharm = "*"
 pygments = "*"
 
 [feature.dev.tasks]
