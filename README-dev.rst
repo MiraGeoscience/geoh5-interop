@@ -29,11 +29,12 @@ Prerequisites
 
 .. note:: External contributors using Pixi
 
-   If you do not have Mira Artifactory credentials, comment out ``index-url``
-   under ``[feature.mira-pypi.pypi-options]`` in ``pixi.toml``, then run
+   If you do not have Mira Artifactory credentials, comment out the definitions of
+   ``extra-index-urls`` under ``[feature.mira-pypi-index.pypi-options]``,
+   and of ``channels`` under ``[feature.mira-channels]`` in ``pixi.toml``, then run
    ``pixi lock``. Packages configured with version references will resolve from
-   public PyPI if the required versions are available there; packages configured
-   with Git references will resolve from Git.
+   public PyPI and conda-forge, if the required versions are available there;
+   packages configured with Git references will resolve from Git.
    Keep these local ``pixi.toml`` and ``pixi.lock`` changes uncommitted.
 
 Install and test

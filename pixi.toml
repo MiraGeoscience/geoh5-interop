@@ -70,7 +70,7 @@ extra-index-urls = [
 ]
 
 [feature.mira-channels]
-# Authenticate for this private Conda channel first; see README.rst.
+# Authenticate for this private Conda channel first; see README-dev.rst.
 channels = [
     "https://mirageoscienceltd.jfrog.io/artifactory/api/conda/public-noremote-conda-dev",
 ]
