@@ -28,7 +28,7 @@ requirements:
     - python ${{ python_min }}.*
     - pip
     - poetry-core >=2.2.1
-    - poetry-dynamic-versioning >=1.9, 1.*
+    - poetry-dynamic-versioning >=1.9.1, 1.*
   run:
     - python >=${{ python_min }}
     - geoh5py >=0.14.0b1, 0.14.*
