@@ -28,7 +28,9 @@ def test_locked_pypi_names_with_git_source():
 
 
 def test_locked_pypi_sources():
-    """Check that Mira packages use the source selected by each environment."""
+    """Check that Mira packages resolve from the source selected for each environment,
+    and that nothing is resolved from PyPI in environments intended to be Conda-only.
+    """
 
     package_root = Path(__file__).resolve().parents[1]
     pixi = tomllib.loads((package_root / "pixi.toml").read_text())
@@ -48,8 +50,8 @@ def test_locked_pypi_sources():
     }
     for environment, data in lock["environments"].items():
         features = pixi["environments"][environment]["features"]
-        expected_pypi = mira_sources if "mira-pypi" in features else set()
-        expected_conda = mira_conda if "mira-conda" in features else set()
+        expected_mira_pypi = mira_sources if "mira-pypi" in features else set()
+        expected_mira_conda = mira_conda if "mira-conda" in features else set()
         for platform, entries in data["packages"].items():
             pypi_sources = locked_pypi_names(entries, packages)
             conda_sources = {
@@ -61,15 +63,23 @@ def test_locked_pypi_sources():
                 for entry in entries
                 if "conda" in entry
             }
-            assert pypi_sources & mira_sources == expected_pypi, (
+            assert pypi_sources & mira_sources == expected_mira_pypi, (
                 environment,
                 platform,
-                expected_pypi,
+                expected_mira_pypi,
                 pypi_sources & mira_sources,
             )
-            assert conda_sources & mira_conda == expected_conda, (
+            assert conda_sources & mira_conda == expected_mira_conda, (
                 environment,
                 platform,
-                expected_conda,
+                expected_mira_conda,
                 conda_sources & mira_conda,
+            )
+
+            # if not pulling Mira packages from PyPI, there should be no PyPI sources
+            assert bool(pypi_sources) == bool(expected_mira_pypi), (
+                environment,
+                platform,
+                expected_mira_pypi,
+                pypi_sources,
             )
