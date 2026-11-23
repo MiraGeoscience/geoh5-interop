@@ -11,9 +11,6 @@ Prerequisites
 * **Pixi and uv:** Install `Pixi <https://pixi.sh/>`_ 0.84.2 and external
   `uv <https://docs.astral.sh/uv/>`_. Keep both commands on ``PATH``; uv is not
   installed by Pixi.
-* **Git LFS:** This repository uses Git LFS. Follow GitHub's `installation
-  instructions
-  <https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage>`_.
 * **prek:** Install `prek <https://prek.j178.dev/>`_ for the configured Git
   hooks.
 * **IDE interpreter:** Configure your IDE to use the interpreter inside
