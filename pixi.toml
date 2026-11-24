@@ -134,4 +134,7 @@ depends-on = [
     {task = "test", environment = "pypi-mira"},
     {task = "test", environment = "pypi-mira-py313"},
     {task = "test", environment = "pypi-mira-py314"},
+    {task = "test", environment = "conda-mira"},
+    {task = "test", environment = "conda-mira-py313"},
+    {task = "test", environment = "conda-mira-py314"},
 ]
