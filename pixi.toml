@@ -108,7 +108,7 @@ pixi-pycharm = "*"
 pygments = "*"
 
 [feature.dev.tasks]
-repl = {description = "Launch interactive Python shell (IPython)", cmd = "ipython"}
+repl = "ipython"
 
 [feature.test.dependencies]
 packaging = "*"
